@@ -14,6 +14,10 @@
 		93C947391AEFB7D40021635C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C947381AEFB7D40021635C /* Images.xcassets */; };
 		93C9473C1AEFB7D40021635C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C9473A1AEFB7D40021635C /* LaunchScreen.xib */; };
 		93C947481AEFB7D40021635C /* HunterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947471AEFB7D40021635C /* HunterTests.m */; };
+		93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947541AEFBD060021635C /* HTLoginViewController.m */; };
+		93C947581AEFCA5C0021635C /* HTRandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947571AEFCA5C0021635C /* HTRandomViewController.m */; };
+		93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9475A1AEFCDD40021635C /* HTMapViewController.m */; };
+		BB10617F65910436C5368948 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1DFEC44C2FF36CCD99AF82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31DB99CE9EC3F2E8E5F68CE9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		43BDC28050C42F2991547390 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8C1DFEC44C2FF36CCD99AF82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C947281AEFB7D40021635C /* Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C9472C1AEFB7D40021635C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C9472D1AEFB7D40021635C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +47,12 @@
 		93C947411AEFB7D40021635C /* HunterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HunterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C947461AEFB7D40021635C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C947471AEFB7D40021635C /* HunterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HunterTests.m; sourceTree = "<group>"; };
+		93C947531AEFBD060021635C /* HTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLoginViewController.h; sourceTree = "<group>"; };
+		93C947541AEFBD060021635C /* HTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLoginViewController.m; sourceTree = "<group>"; };
+		93C947561AEFCA5C0021635C /* HTRandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRandomViewController.h; sourceTree = "<group>"; };
+		93C947571AEFCA5C0021635C /* HTRandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRandomViewController.m; sourceTree = "<group>"; };
+		93C947591AEFCDD40021635C /* HTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMapViewController.h; sourceTree = "<group>"; };
+		93C9475A1AEFCDD40021635C /* HTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB10617F65910436C5368948 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87CA023CBE069797A3F20B3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31DB99CE9EC3F2E8E5F68CE9 /* Pods.debug.xcconfig */,
+				43BDC28050C42F2991547390 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		93C9471F1AEFB7D40021635C = {
 			isa = PBXGroup;
 			children = (
 				93C9472A1AEFB7D40021635C /* Hunter */,
 				93C947441AEFB7D40021635C /* HunterTests */,
 				93C947291AEFB7D40021635C /* Products */,
+				87CA023CBE069797A3F20B3B /* Pods */,
+				D1EA8D714AFCA3F490B89AE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +106,7 @@
 		93C9472A1AEFB7D40021635C /* Hunter */ = {
 			isa = PBXGroup;
 			children = (
+				93C947511AEFBAC20021635C /* ViewController */,
 				93C9472F1AEFB7D40021635C /* AppDelegate.h */,
 				93C947301AEFB7D40021635C /* AppDelegate.m */,
 				93C947321AEFB7D40021635C /* ViewController.h */,
@@ -119,6 +145,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		93C947511AEFBAC20021635C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93C947531AEFBD060021635C /* HTLoginViewController.h */,
+				93C947541AEFBD060021635C /* HTLoginViewController.m */,
+				93C947561AEFCA5C0021635C /* HTRandomViewController.h */,
+				93C947571AEFCA5C0021635C /* HTRandomViewController.m */,
+				93C947591AEFCDD40021635C /* HTMapViewController.h */,
+				93C9475A1AEFCDD40021635C /* HTMapViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		D1EA8D714AFCA3F490B89AE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C1DFEC44C2FF36CCD99AF82 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93C9474B1AEFB7D40021635C /* Build configuration list for PBXNativeTarget "Hunter" */;
 			buildPhases = (
+				3C6A0FD17F496068DECD35B4 /* Check Pods Manifest.lock */,
 				93C947241AEFB7D40021635C /* Sources */,
 				93C947251AEFB7D40021635C /* Frameworks */,
 				93C947261AEFB7D40021635C /* Resources */,
+				8BDB7E2DBBE06AF6989D4FAC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,6 +212,7 @@
 		93C947201AEFB7D40021635C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HT;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = ALPHACamp;
 				TargetAttributes = {
@@ -214,6 +264,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C6A0FD17F496068DECD35B4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BDB7E2DBBE06AF6989D4FAC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93C947241AEFB7D40021635C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -221,7 +304,10 @@
 			files = (
 				93C947341AEFB7D40021635C /* ViewController.m in Sources */,
 				93C947311AEFB7D40021635C /* AppDelegate.m in Sources */,
+				93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */,
 				93C9472E1AEFB7D40021635C /* main.m in Sources */,
+				93C947581AEFCA5C0021635C /* HTRandomViewController.m in Sources */,
+				93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +431,11 @@
 		};
 		93C9474C1AEFB7D40021635C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31DB99CE9EC3F2E8E5F68CE9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hunter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +443,11 @@
 		};
 		93C9474D1AEFB7D40021635C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43BDC28050C42F2991547390 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hunter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +506,7 @@
 				93C9474D1AEFB7D40021635C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C9474E1AEFB7D40021635C /* Build configuration list for PBXNativeTarget "HunterTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +515,7 @@
 				93C947501AEFB7D40021635C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
