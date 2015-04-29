@@ -9,9 +9,12 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <CLLocationManagerDelegate>
+//{
+//    CLLocationManager *userLocation;
+//}
 @end
 
 @implementation AppDelegate
@@ -23,10 +26,12 @@
                   clientKey:@"o2IcXKm5R0jtD0vZb9itUF4xFxx1Xu1M6GYTaFWg"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFFacebookUtils initializeFacebook];
-    
+    [self getUserLocation];
 
     return YES;
 }
+
+
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
@@ -60,5 +65,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - userLocation
+
+- (void)getUserLocation {
+    _userLocation = [[CLLocationManager alloc] init];
+    _userLocation.delegate = self;
+
+    _userLocation.desiredAccuracy = kCLLocationAccuracyKilometer;
+    
+    // Set a movement threshold for new events.
+    _userLocation.distanceFilter = 500; // meters
+    
+    //詢問是否要給APP定位權限
+    [_userLocation requestWhenInUseAuthorization];
+    //start getUserLocation
+    [_userLocation startUpdatingLocation];
+
+}
+
 
 @end
