@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
 
-@interface HTMapViewController ()
+@interface HTMapViewController () 
 {
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
@@ -19,16 +19,19 @@
 
 @implementation HTMapViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    
+
     MKPointAnnotation *point;
     
+    //set Global 變數
     AppDelegate* appDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     point.coordinate = CLLocationCoordinate2DMake(appDel.userLocation.location.coordinate.latitude,appDel.userLocation.location.coordinate.longitude);
+
+    //assure user location is right
     NSLog(@"%f,%f",appDel.userLocation.location.coordinate.latitude,appDel.userLocation.location.coordinate.longitude);
 
     point.title = @"目前位置";
@@ -46,7 +49,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

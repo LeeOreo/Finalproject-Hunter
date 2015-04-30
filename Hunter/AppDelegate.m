@@ -69,19 +69,34 @@
 #pragma mark - userLocation
 
 - (void)getUserLocation {
-    _userLocation = [[CLLocationManager alloc] init];
-    _userLocation.delegate = self;
+    if (_userLocation ==nil) {
+        _userLocation = [[CLLocationManager alloc] init];
+        _userLocation.delegate = self;
+        
+        _userLocation.desiredAccuracy = kCLLocationAccuracyBest;
+        
+        
+        // Set a movement threshold for new events.
+        _userLocation.distanceFilter = kCLLocationAccuracyNearestTenMeters;
+        
+        // Set a movement threshold for new events.
+        _userLocation.distanceFilter = 500; // meters
+        
+        //詢問是否要給APP定位權限
+        [_userLocation requestWhenInUseAuthorization];
+        
+        //start getUserLocation
+        [_userLocation startUpdatingLocation];
+        
+        NSLog(@"%6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);
+    }else
+        NSLog(@"no");
 
-    _userLocation.desiredAccuracy = kCLLocationAccuracyKilometer;
-    
-    // Set a movement threshold for new events.
-    _userLocation.distanceFilter = 500; // meters
-    
-    //詢問是否要給APP定位權限
-    [_userLocation requestWhenInUseAuthorization];
-    //start getUserLocation
-    [_userLocation startUpdatingLocation];
+}
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    
+    NSLog(@"%6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);
 }
 
 

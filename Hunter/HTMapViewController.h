@@ -13,4 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *myMap;
 
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+
 @end
