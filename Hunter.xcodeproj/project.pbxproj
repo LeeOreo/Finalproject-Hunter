@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9340859C1AF5BD82004F4031 /* HTChoseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9340859B1AF5BD82004F4031 /* HTChoseViewController.m */; };
 		93C9472E1AEFB7D40021635C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9472D1AEFB7D40021635C /* main.m */; };
 		93C947311AEFB7D40021635C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947301AEFB7D40021635C /* AppDelegate.m */; };
 		93C947341AEFB7D40021635C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947331AEFB7D40021635C /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		93C9473C1AEFB7D40021635C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93C9473A1AEFB7D40021635C /* LaunchScreen.xib */; };
 		93C947481AEFB7D40021635C /* HunterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947471AEFB7D40021635C /* HunterTests.m */; };
 		93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947541AEFBD060021635C /* HTLoginViewController.m */; };
-		93C947581AEFCA5C0021635C /* HTRandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947571AEFCA5C0021635C /* HTRandomViewController.m */; };
 		93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9475A1AEFCDD40021635C /* HTMapViewController.m */; };
 		93C9475D1AF0FB350021635C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9475C1AF0FB350021635C /* MapKit.framework */; };
 		93C9475F1AF0FC910021635C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9475C1AF0FB350021635C /* MapKit.framework */; };
@@ -36,6 +36,9 @@
 		31DB99CE9EC3F2E8E5F68CE9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		43BDC28050C42F2991547390 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8C1DFEC44C2FF36CCD99AF82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		934085991AF3DE65004F4031 /* HTConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTConst.h; sourceTree = "<group>"; };
+		9340859A1AF5BD82004F4031 /* HTChoseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTChoseViewController.h; sourceTree = "<group>"; };
+		9340859B1AF5BD82004F4031 /* HTChoseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTChoseViewController.m; sourceTree = "<group>"; };
 		93C947281AEFB7D40021635C /* Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C9472C1AEFB7D40021635C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C9472D1AEFB7D40021635C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,8 +54,6 @@
 		93C947471AEFB7D40021635C /* HunterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HunterTests.m; sourceTree = "<group>"; };
 		93C947531AEFBD060021635C /* HTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLoginViewController.h; sourceTree = "<group>"; };
 		93C947541AEFBD060021635C /* HTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLoginViewController.m; sourceTree = "<group>"; };
-		93C947561AEFCA5C0021635C /* HTRandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRandomViewController.h; sourceTree = "<group>"; };
-		93C947571AEFCA5C0021635C /* HTRandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRandomViewController.m; sourceTree = "<group>"; };
 		93C947591AEFCDD40021635C /* HTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMapViewController.h; sourceTree = "<group>"; };
 		93C9475A1AEFCDD40021635C /* HTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMapViewController.m; sourceTree = "<group>"; };
 		93C9475C1AF0FB350021635C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -111,6 +112,7 @@
 		93C9472A1AEFB7D40021635C /* Hunter */ = {
 			isa = PBXGroup;
 			children = (
+				934085991AF3DE65004F4031 /* HTConst.h */,
 				93C947511AEFBAC20021635C /* ViewController */,
 				93C9472F1AEFB7D40021635C /* AppDelegate.h */,
 				93C947301AEFB7D40021635C /* AppDelegate.m */,
@@ -155,8 +157,8 @@
 			children = (
 				93C947531AEFBD060021635C /* HTLoginViewController.h */,
 				93C947541AEFBD060021635C /* HTLoginViewController.m */,
-				93C947561AEFCA5C0021635C /* HTRandomViewController.h */,
-				93C947571AEFCA5C0021635C /* HTRandomViewController.m */,
+				9340859A1AF5BD82004F4031 /* HTChoseViewController.h */,
+				9340859B1AF5BD82004F4031 /* HTChoseViewController.m */,
 				93C947591AEFCDD40021635C /* HTMapViewController.h */,
 				93C9475A1AEFCDD40021635C /* HTMapViewController.m */,
 			);
@@ -316,8 +318,8 @@
 				93C947341AEFB7D40021635C /* ViewController.m in Sources */,
 				93C947311AEFB7D40021635C /* AppDelegate.m in Sources */,
 				93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */,
+				9340859C1AF5BD82004F4031 /* HTChoseViewController.m in Sources */,
 				93C9472E1AEFB7D40021635C /* main.m in Sources */,
-				93C947581AEFCA5C0021635C /* HTRandomViewController.m in Sources */,
 				93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

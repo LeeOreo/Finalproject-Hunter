@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <PFFacebookUtils.h>
+#import "AppDelegate.h"
 
 @interface HTLoginViewController ()
 
@@ -61,7 +62,7 @@
 
 - (IBAction)fbLoginButton:(id)sender {
     
-    NSArray *permissionArray = @[@"user_about_me",@"user_relationships",@"user_location",@"user_friends",@"email"];
+    NSArray *permissionArray = @[@"email"];
     [PFFacebookUtils logInWithPermissions:permissionArray block:^(PFUser *user, NSError *error){
         if (!user) {
             NSString *errorMessage = nil;
@@ -85,9 +86,13 @@
                 NSLog(@"User with facebook logged in!");
                 
             }
+            
+            UINavigationController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"mapVC"];
+            [self presentViewController:mapVC animated:YES completion:nil];
+            
             [self saveUserDataToParse];
+
         }
-        
     }];
 }
 
@@ -101,16 +106,26 @@
             // Parse the data received
             NSDictionary *userData = (NSDictionary *)result;
 
+            
             NSString *facebookID = userData[@"id"];
             NSString *name = userData[@"name"];
-            NSString *email =userData[@"email"];
             NSString *pictureURL =[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID];
+            NSString *email = userData[@"email"];
+            
             NSLog(@"%@",pictureURL);
             [[PFUser currentUser] setObject:name forKey:@"name"];
             [[PFUser currentUser] setObject:facebookID forKey:@"facebookID"];
-            [[PFUser currentUser] setObject:email forKey:@"email"];
             [[PFUser currentUser] setObject:pictureURL forKey:@"pictureURL"];
+            [[PFUser currentUser] setObject:email forKey:@"email"];
+
+//            PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLatitude: longitude:];
             
+            [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+                if (!error) {
+                    // do something with the new geoPoint
+                }
+            }];
+
             [[PFUser currentUser] saveInBackground];
             
         } else if ([[[[error userInfo] objectForKey:@"error"] objectForKey:@"type"]
