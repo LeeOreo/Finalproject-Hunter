@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9340859C1AF5BD82004F4031 /* HTChoseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9340859B1AF5BD82004F4031 /* HTChoseViewController.m */; };
+		9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */; };
+		9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */; };
 		93C9472E1AEFB7D40021635C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9472D1AEFB7D40021635C /* main.m */; };
 		93C947311AEFB7D40021635C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947301AEFB7D40021635C /* AppDelegate.m */; };
 		93C947341AEFB7D40021635C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947331AEFB7D40021635C /* ViewController.m */; };
@@ -37,8 +38,10 @@
 		43BDC28050C42F2991547390 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8C1DFEC44C2FF36CCD99AF82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		934085991AF3DE65004F4031 /* HTConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTConst.h; sourceTree = "<group>"; };
-		9340859A1AF5BD82004F4031 /* HTChoseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTChoseViewController.h; sourceTree = "<group>"; };
-		9340859B1AF5BD82004F4031 /* HTChoseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTChoseViewController.m; sourceTree = "<group>"; };
+		9369F7C21AF8D913008ADAC5 /* HTCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCountDownViewController.h; sourceTree = "<group>"; };
+		9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCountDownViewController.m; sourceTree = "<group>"; };
+		9369F7FE1AFA0891008ADAC5 /* HT3PreyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT3PreyViewController.h; sourceTree = "<group>"; };
+		9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT3PreyViewController.m; sourceTree = "<group>"; };
 		93C947281AEFB7D40021635C /* Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C9472C1AEFB7D40021635C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C9472D1AEFB7D40021635C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -157,10 +160,12 @@
 			children = (
 				93C947531AEFBD060021635C /* HTLoginViewController.h */,
 				93C947541AEFBD060021635C /* HTLoginViewController.m */,
-				9340859A1AF5BD82004F4031 /* HTChoseViewController.h */,
-				9340859B1AF5BD82004F4031 /* HTChoseViewController.m */,
+				9369F7C21AF8D913008ADAC5 /* HTCountDownViewController.h */,
+				9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */,
 				93C947591AEFCDD40021635C /* HTMapViewController.h */,
 				93C9475A1AEFCDD40021635C /* HTMapViewController.m */,
+				9369F7FE1AFA0891008ADAC5 /* HT3PreyViewController.h */,
+				9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -315,10 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */,
 				93C947341AEFB7D40021635C /* ViewController.m in Sources */,
 				93C947311AEFB7D40021635C /* AppDelegate.m in Sources */,
 				93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */,
-				9340859C1AF5BD82004F4031 /* HTChoseViewController.m in Sources */,
+				9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */,
 				93C9472E1AEFB7D40021635C /* main.m in Sources */,
 				93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */,
 			);

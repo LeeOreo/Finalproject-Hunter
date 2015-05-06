@@ -77,7 +77,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
+//    [PFUser logOutInBackground];
+//    [PFUser logOut];
     [PFUser.currentUser setObject:[NSNull null] forKey: @"userLocation"];
     [[PFUser currentUser] saveInBackground];
 }
@@ -112,34 +113,13 @@
     //upload coordinate to parse~~~~~~~~~~
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
 
-    
-    
     PFUser *user = [PFUser currentUser];
     if (user) {
         // User's location
         PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
         [user setObject: userGeoPoint forKey: @"userLocation"];
         [user saveInBackground];
-        
-        
-//        // Create a query for places
-//        PFQuery *query = [PFQuery queryWithClassName:@"userLocation"];
-//        // Interested in locations near user.
-//        [query whereKey:@"location" nearGeoPoint:userGeoPoint];
-//        // Limit what could be a lot of points.
-//        query.limit = 3;
-//        // Final list of objects
-//        user = [query findObjects];
-//        
-//        PFGeoPoint* point = [PFGeoPoint geoPointWithLatitude: lat longitude: lon];
-//
-//        PFQuery *locationQuery = [PFUser query];
-//        [locationQuery whereKey:@"userLocation" equalTo:locationQuery];
-//        [locationQuery getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error)
-//        {
-//            [user addObject:_userLocation forKey:@"userLocation"];
-//            [user saveInBackground];
-//        }];
+
     }
     NSLog(@"%6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);
 }

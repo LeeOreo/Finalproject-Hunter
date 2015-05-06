@@ -87,9 +87,12 @@
                 
             }
             
-            UINavigationController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"mapVC"];
-            [self presentViewController:mapVC animated:YES completion:nil];
+//            UINavigationController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"mapVC"];
+//            [self presentViewController:mapVC animated:YES completion:nil];
             
+            UIViewController *preylistVC = [self.storyboard instantiateViewControllerWithIdentifier:@"preylistVC"];
+            [self presentViewController:preylistVC animated:YES completion:nil];
+
             [self saveUserDataToParse];
 
         }

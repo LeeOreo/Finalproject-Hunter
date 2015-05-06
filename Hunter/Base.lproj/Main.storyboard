@@ -64,122 +64,130 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="234" y="366"/>
+            <point key="canvasLocation" x="-16" y="360"/>
         </scene>
-        <!--Chose View Controller-->
-        <scene sceneID="DdR-yj-hKL">
+        <!--Prey View Controller-->
+        <scene sceneID="kUd-ar-nnS">
             <objects>
-                <tableViewController id="zYc-sN-aiG" customClass="HTChoseViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RQC-ID-vNf">
+                <viewController storyboardIdentifier="preylistVC" id="DGY-6p-gpv" customClass="HT3PreyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1oi-ae-92V"/>
+                        <viewControllerLayoutGuide type="bottom" id="gEm-x9-BXW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YAW-6T-0jg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="cZK-W9-FRt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-E1-qR3">
+                                <rect key="frame" x="40" y="89" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UX8-le-qKu">
+                                <rect key="frame" x="40" y="234" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-Vy-0c7">
+                                <rect key="frame" x="40" y="384" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A14-OZ-0vh">
+                                <rect key="frame" x="148" y="111" width="82" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大將" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IF-3Z-6U9">
+                                <rect key="frame" x="148" y="148" width="82" height="21"/>
+                                <color key="backgroundColor" red="0.77458742339999997" green="1" blue="0.96604162159999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6od-p5-AZH">
+                                <rect key="frame" x="148" y="247" width="82" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="中將" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RE-LV-mEd">
+                                <rect key="frame" x="148" y="288" width="82" height="21"/>
+                                <color key="backgroundColor" red="0.77458742339999997" green="1" blue="0.96604162159999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-S2-MEh">
+                                <rect key="frame" x="148" y="401" width="82" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="open將" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOa-j5-rLB">
+                                <rect key="frame" x="148" y="448" width="82" height="21"/>
+                                <color key="backgroundColor" red="0.77458742339999997" green="1" blue="0.96604162159999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXI-to-4IR">
+                                <rect key="frame" x="258" y="124" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1929827593" blue="0.35360905650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hunt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prey1hunt:" destination="DGY-6p-gpv" eventType="touchUpInside" id="WDu-Gp-7eW"/>
+                                    <segue destination="VAI-jq-McD" kind="push" identifier="preyInfo1" id="Ugn-pt-NDQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1M-Ew-z5r">
+                                <rect key="frame" x="258" y="269" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1929827593" blue="0.35360905650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hunt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prey2hunt:" destination="DGY-6p-gpv" eventType="touchUpInside" id="UP1-iX-cij"/>
+                                    <segue destination="VAI-jq-McD" kind="push" identifier="preyInfo2" id="I3S-Tl-F0T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpG-hc-8mu">
+                                <rect key="frame" x="258" y="419" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1929827593" blue="0.35360905650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Hunt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prey3hunt:" destination="DGY-6p-gpv" eventType="touchUpInside" id="O8J-kS-dvS"/>
+                                    <segue destination="VAI-jq-McD" kind="push" identifier="preyInfo3" id="2gl-tD-mWa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDv-Yl-pao">
+                                <rect key="frame" x="84" y="518" width="152" height="30"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.95294117649999999" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="重新搜索附近目標">
+                                    <color key="titleColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="oei-5A-kFZ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="yvP-Xr-9wV">
-                            <rect key="frame" x="0.0" y="-219" width="320" height="568"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
-                        <sections>
-                            <tableViewSection id="foe-v3-89V">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="aih-zo-yOi">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aih-zo-yOi" id="C8f-MX-yik">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNi-mf-gu1">
-                                                    <rect key="frame" x="13" y="8" width="93" height="93"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-2O-hB5">
-                                                    <rect key="frame" x="266" y="40" width="46" height="30"/>
-                                                    <state key="normal" title="Hunter">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yla-kt-MWa">
-                                                    <rect key="frame" x="139" y="44" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="q4q-gU-QoG">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q4q-gU-QoG" id="URu-eh-AQb">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODU-Wd-S0f">
-                                                    <rect key="frame" x="13" y="8" width="93" height="93"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epO-sy-hk5">
-                                                    <rect key="frame" x="266" y="40" width="46" height="30"/>
-                                                    <state key="normal" title="Hunter">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULY-Cu-lKi">
-                                                    <rect key="frame" x="139" y="44" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="jFM-t7-tVo">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jFM-t7-tVo" id="hXf-SE-nlu">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6m-OC-KZH">
-                                                    <rect key="frame" x="13" y="8" width="93" height="93"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMf-hW-yCh">
-                                                    <rect key="frame" x="266" y="40" width="46" height="30"/>
-                                                    <state key="normal" title="Hunter">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZJ-9u-qPT">
-                                                    <rect key="frame" x="139" y="44" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="zYc-sN-aiG" id="plW-Xr-YeZ"/>
-                            <outlet property="delegate" destination="zYc-sN-aiG" id="baA-po-LaM"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="5Nk-i4-d17"/>
+                    </view>
                     <connections>
-                        <outlet property="distance1" destination="yla-kt-MWa" id="cut-ZX-8qW"/>
-                        <outlet property="distance2" destination="ULY-Cu-lKi" id="NeX-OQ-UzX"/>
-                        <outlet property="distance3" destination="DZJ-9u-qPT" id="XUG-HD-9GU"/>
-                        <outlet property="hunter1" destination="0gT-2O-hB5" id="AhC-5f-6X3"/>
-                        <outlet property="hunter2" destination="epO-sy-hk5" id="Yht-eF-ZI1"/>
-                        <outlet property="hunter3" destination="jMf-hW-yCh" id="Ajg-iv-LDI"/>
-                        <outlet property="prey1" destination="oNi-mf-gu1" id="u3P-HS-54d"/>
-                        <outlet property="prey2" destination="ODU-Wd-S0f" id="9Wl-3Y-HYa"/>
-                        <outlet property="prey3" destination="C6m-OC-KZH" id="2Gw-JT-bnF"/>
+                        <outlet property="preyDistance1" destination="A14-OZ-0vh" id="oUc-1X-JT1"/>
+                        <outlet property="preyDistance2" destination="6od-p5-AZH" id="eY0-WK-Ca2"/>
+                        <outlet property="preyDistance3" destination="49O-S2-MEh" id="nbt-UN-JEU"/>
+                        <outlet property="preyImage1" destination="ev7-E1-qR3" id="VQb-EU-khf"/>
+                        <outlet property="preyImage2" destination="UX8-le-qKu" id="QD1-Pm-Nnc"/>
+                        <outlet property="preyImage3" destination="6qh-Vy-0c7" id="fNn-NS-157"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Fz-5W-n60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPG-cJ-paG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="366"/>
+            <point key="canvasLocation" x="-16" y="1027"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="ToC-8B-r8s">
@@ -242,25 +250,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw6-Gd-tsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="1123"/>
+            <point key="canvasLocation" x="906" y="807"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="5F8-eH-gU7">
+        <!--Count Down View Controller-->
+        <scene sceneID="Voe-Id-Rxs">
             <objects>
-                <viewController id="lau-hp-Xhs" sceneMemberID="viewController">
+                <viewController id="RaN-Ou-pat" customClass="HTCountDownViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tKd-zT-Lni"/>
-                        <viewControllerLayoutGuide type="bottom" id="IoI-lx-s7b"/>
+                        <viewControllerLayoutGuide type="top" id="aW1-pZ-Olk"/>
+                        <viewControllerLayoutGuide type="bottom" id="9GN-5A-EWw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JuH-qf-P7O">
+                    <view key="view" contentMode="scaleToFill" id="RWE-wg-gaD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmm-ap-end">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCountDown:" destination="RaN-Ou-pat" eventType="touchUpInside" id="WA2-r6-cBo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TimeLeft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeT-tJ-arj">
+                                <rect key="frame" x="16" y="199" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="secondLeft" destination="jeT-tJ-arj" id="SEX-bk-4dW"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mfS-Vy-Dso" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cO7-yx-jKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121" y="1123"/>
+            <point key="canvasLocation" x="708" y="1806"/>
         </scene>
         <!--Item-->
         <scene sceneID="cCQ-af-gUC">
@@ -268,6 +296,7 @@
                 <navigationController storyboardIdentifier="mapVC" automaticallyAdjustsScrollViewInsets="NO" id="VAI-jq-McD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8XL-B5-5on"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PZy-dF-tYq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5JV-B2-jB1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -279,30 +308,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbQ-qv-vEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="1123"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eMO-WM-F5o">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2n3-nG-F42" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GIx-yF-0xb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zYc-sN-aiG" kind="relationship" relationship="rootViewController" id="cPR-xN-kdz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S8S-Rt-wnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="708" y="366"/>
+            <point key="canvasLocation" x="530" y="807"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="phone" width="209" height="336"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="2gl-tD-mWa"/>
+    </inferredMetricsTieBreakers>
 </document>
