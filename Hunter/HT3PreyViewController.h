@@ -19,4 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *preyDistance3;
 @property (weak, nonatomic) IBOutlet UIImageView *preyImage3;
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+
 @end

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */; };
 		9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */; };
+		9369F8021AFA2551008ADAC5 /* phone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9369F8011AFA2551008ADAC5 /* phone.jpg */; };
+		9369F8061AFA38F3008ADAC5 /* HTLocationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F8051AFA38F3008ADAC5 /* HTLocationData.m */; };
 		93C9472E1AEFB7D40021635C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9472D1AEFB7D40021635C /* main.m */; };
 		93C947311AEFB7D40021635C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947301AEFB7D40021635C /* AppDelegate.m */; };
 		93C947341AEFB7D40021635C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947331AEFB7D40021635C /* ViewController.m */; };
@@ -42,6 +44,9 @@
 		9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCountDownViewController.m; sourceTree = "<group>"; };
 		9369F7FE1AFA0891008ADAC5 /* HT3PreyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT3PreyViewController.h; sourceTree = "<group>"; };
 		9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT3PreyViewController.m; sourceTree = "<group>"; };
+		9369F8011AFA2551008ADAC5 /* phone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = phone.jpg; sourceTree = "<group>"; };
+		9369F8041AFA38F3008ADAC5 /* HTLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLocationData.h; sourceTree = "<group>"; };
+		9369F8051AFA38F3008ADAC5 /* HTLocationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLocationData.m; sourceTree = "<group>"; };
 		93C947281AEFB7D40021635C /* Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C9472C1AEFB7D40021635C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C9472D1AEFB7D40021635C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,9 +97,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9369F8031AFA38AF008ADAC5 /* LocationData */ = {
+			isa = PBXGroup;
+			children = (
+				9369F8041AFA38F3008ADAC5 /* HTLocationData.h */,
+				9369F8051AFA38F3008ADAC5 /* HTLocationData.m */,
+			);
+			name = LocationData;
+			sourceTree = "<group>";
+		};
 		93C9471F1AEFB7D40021635C = {
 			isa = PBXGroup;
 			children = (
+				9369F8011AFA2551008ADAC5 /* phone.jpg */,
 				93C9472A1AEFB7D40021635C /* Hunter */,
 				93C947441AEFB7D40021635C /* HunterTests */,
 				93C947291AEFB7D40021635C /* Products */,
@@ -116,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				934085991AF3DE65004F4031 /* HTConst.h */,
+				9369F8031AFA38AF008ADAC5 /* LocationData */,
 				93C947511AEFBAC20021635C /* ViewController */,
 				93C9472F1AEFB7D40021635C /* AppDelegate.h */,
 				93C947301AEFB7D40021635C /* AppDelegate.m */,
@@ -270,6 +286,7 @@
 				93C947371AEFB7D40021635C /* Main.storyboard in Resources */,
 				93C9473C1AEFB7D40021635C /* LaunchScreen.xib in Resources */,
 				93C947391AEFB7D40021635C /* Images.xcassets in Resources */,
+				9369F8021AFA2551008ADAC5 /* phone.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +339,7 @@
 			files = (
 				9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */,
 				93C947341AEFB7D40021635C /* ViewController.m in Sources */,
+				9369F8061AFA38F3008ADAC5 /* HTLocationData.m in Sources */,
 				93C947311AEFB7D40021635C /* AppDelegate.m in Sources */,
 				93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */,
 				9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */,

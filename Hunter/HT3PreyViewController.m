@@ -11,6 +11,8 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <CoreLocation/CoreLocation.h>
+#import "HTMapViewController.h"
+#import "HTLocationData.h"
 
 @interface HT3PreyViewController ()
 
@@ -21,27 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    MKPointAnnotation *point;
+
+    HTLocationData *locationData = [[HTLocationData alloc] init];
+    NSArray *array = [locationData getPreyLocationData];
     
-    //透過UIApplication sharedApplication 設定 Global 變數
-    AppDelegate* appDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    point.coordinate = CLLocationCoordinate2DMake(appDel.userLocation.location.coordinate.latitude,appDel.userLocation.location.coordinate.longitude);
-    
-    //set myGeoPoint
-    PFGeoPoint *myGeoPoint = [PFGeoPoint geoPointWithLatitude:appDel.userLocation.location.coordinate.latitude longitude:appDel.userLocation.location.coordinate.longitude];
-    
-    // Create a query for places
-    PFQuery *query = [PFUser query];
-    
-    // Interested in locations near user.
-    [query whereKey:@"userLocation" nearGeoPoint:myGeoPoint];
-    
-    // Limit what could be a lot of points.
-    query.limit = 4;
-    NSArray *array = [query findObjects];
-    NSLog(@"array %d",array.count);
-    
-    
+    _backgroundImage.image = [UIImage imageNamed:@"phone.jpg"];
     
     //set prey1 photo~~~~~~~~~~~
     NSString *preyImageURL1 = [array[0] objectForKey:@"pictureURL"];
@@ -63,9 +49,6 @@
     
     
     
-    
-    
-    //set prey1Distance~~~~~~~~~                 這裡有問題
 //    CLLocation *preylocation1 = [array[0] objectForKey:@"userLocation"];
 //    
 //    CLLocationDistance distance = [appDel.userLocation.location distanceFromLocation:preylocation1];
@@ -76,19 +59,19 @@
 }
 
     //send preyInfo to mapVC
-
-- (IBAction)prey1hunt:(id)sender {
-    
-    
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"preyInfo1"]) {
+        UINavigationController *navController = [segue destinationViewController];
+        HTMapViewController *vc = navController.viewControllers[0];
+        vc.preyImage.image = _preyImage1.image;
+    }else if ([[segue identifier] isEqualToString:@"preyInfo2"]) {
+        HTMapViewController *vc = [segue destinationViewController];
+        vc.preyImage.image = _preyImage2.image;
+    }else if ([[segue identifier] isEqualToString:@"preyInfo3"]) {
+        HTMapViewController *vc = [segue destinationViewController];
+        vc.preyImage.image = _preyImage3.image;
+    }
 }
-- (IBAction)prey2hunt:(id)sender {
-    
-}
-
-- (IBAction)prey3hunt:(id)sender {
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

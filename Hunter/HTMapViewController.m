@@ -39,18 +39,12 @@
     [self.myMap setShowsUserLocation:YES];
     [self.myMap setDelegate:self];
 
-    
-    //set prey photo~~~~~~~~~~~
-    NSURL *imageURL = [NSURL URLWithString:@"https://graph.facebook.com/481242102030491/picture?type=large&return_ssl_resources=1"];
-    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    _preyImage.image = [UIImage imageWithData:imageData];
-
 //*********************************************************************************************
     
     //set prey distance~~~~~~~~~~~~~
-    
-    PFGeoPoint *myGeoPoint = [PFGeoPoint geoPointWithLatitude:appDel.userLocation.location.coordinate.latitude longitude:appDel.userLocation.location.coordinate.longitude];
-    
+//    
+//    PFGeoPoint *myGeoPoint = [PFGeoPoint geoPointWithLatitude:appDel.userLocation.location.coordinate.latitude longitude:appDel.userLocation.location.coordinate.longitude];
+//    
    // PFObject *userlocation = [PFObject objectWithClassName:@"userLocation"];
    // userlocation[@"userLocation"] = myGeoPoint;
     
@@ -59,16 +53,16 @@
     // User's location
 //    PFGeoPoint *myGeoPoint = userObject[@"userLocation"];
     // Create a query for places
-    PFQuery *query = [PFUser query];
+//    PFQuery *query = [PFUser query];
     // Interested in locations near user.
-    [query whereKey:@"userLocation" nearGeoPoint:myGeoPoint];
+//    [query whereKey:@"userLocation" nearGeoPoint:myGeoPoint];
     // Limit what could be a lot of points.
-    query.limit = 4;
+//    query.limit = 4;
     // Final list of objects
 //    [preyArray addObject:[query findObjects]];
     
-    NSArray *array = [query findObjects];
-    NSLog(@"array %d",array.count);
+//    NSArray *array = [query findObjects];
+//    NSLog(@"array %d",array.count);
     
     
 //    PFQuery *query2 = [PFUser query];
@@ -80,12 +74,6 @@
 
 
     
-    NSMutableArray *preyArray = [[NSMutableArray alloc] initWithArray:[query findObjects]];
-
-    NSLog(@"sesese%@",preyArray);
-
-    PFGeoPoint *preylocation = [preyArray[3] objectForKey:@"userLocation"];
-    NSLog(@"jijijijijijjijijijijiji%@",preylocation);
 //    CLLocationDistance distance = [myGeoPoint distanceFromLocation:preylocation];
     
     

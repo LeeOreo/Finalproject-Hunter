@@ -139,8 +139,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="prey1hunt:" destination="DGY-6p-gpv" eventType="touchUpInside" id="WDu-Gp-7eW"/>
-                                    <segue destination="VAI-jq-McD" kind="push" identifier="preyInfo1" id="Ugn-pt-NDQ"/>
+                                    <segue destination="VAI-jq-McD" kind="modal" identifier="preyInfo1" id="Ugn-pt-NDQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1M-Ew-z5r">
@@ -150,7 +149,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="prey2hunt:" destination="DGY-6p-gpv" eventType="touchUpInside" id="UP1-iX-cij"/>
                                     <segue destination="VAI-jq-McD" kind="push" identifier="preyInfo2" id="I3S-Tl-F0T"/>
                                 </connections>
                             </button>
@@ -161,7 +159,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="prey3hunt:" destination="DGY-6p-gpv" eventType="touchUpInside" id="O8J-kS-dvS"/>
                                     <segue destination="VAI-jq-McD" kind="push" identifier="preyInfo3" id="2gl-tD-mWa"/>
                                 </connections>
                             </button>
@@ -177,6 +174,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="cZK-W9-FRt" id="mOS-sF-UD1"/>
                         <outlet property="preyDistance1" destination="A14-OZ-0vh" id="oUc-1X-JT1"/>
                         <outlet property="preyDistance2" destination="6od-p5-AZH" id="eY0-WK-Ca2"/>
                         <outlet property="preyDistance3" destination="49O-S2-MEh" id="nbt-UN-JEU"/>
@@ -201,8 +199,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-Sy-7Cq">
-                                <rect key="frame" x="16" y="64" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="k1B-bI-znL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVZ-Du-PEF">
                                 <rect key="frame" x="245" y="93" width="59" height="21"/>
@@ -211,7 +209,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-Hj-UHq">
-                                <rect key="frame" x="122" y="442" width="77" height="30"/>
+                                <rect key="frame" x="122" y="492" width="77" height="30"/>
                                 <state key="normal" title="Hunter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -223,13 +221,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-Ap-aJN">
-                                <rect key="frame" x="16" y="152" width="288" height="263"/>
+                                <rect key="frame" x="0.0" y="180" width="320" height="263"/>
                                 <connections>
                                     <outlet property="delegate" destination="6CX-jr-IQN" id="1Dr-br-O4k"/>
                                 </connections>
                             </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-Sy-7Cq">
+                                <rect key="frame" x="16" y="72" width="80" height="80"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k1B-bI-znL" firstAttribute="leading" secondItem="VML-Sa-KaH" secondAttribute="leading" id="LJl-5s-Cjf"/>
+                            <constraint firstItem="6lo-RL-6By" firstAttribute="top" secondItem="k1B-bI-znL" secondAttribute="bottom" id="NLj-lY-uTE"/>
+                            <constraint firstItem="k1B-bI-znL" firstAttribute="top" secondItem="VML-Sa-KaH" secondAttribute="top" id="nhp-hj-A3z"/>
+                            <constraint firstAttribute="trailing" secondItem="k1B-bI-znL" secondAttribute="trailing" id="ocv-IU-nEO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Uc-A6-YUg">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="UlW-Hf-E7Q">
@@ -245,7 +252,7 @@
                     <connections>
                         <outlet property="myMap" destination="bTM-Ap-aJN" id="rhg-p6-dDQ"/>
                         <outlet property="preyDistance" destination="s3X-OV-uwn" id="DxP-4f-e1q"/>
-                        <outlet property="preyImage" destination="NDj-Sy-7Cq" id="TCd-Bs-jZU"/>
+                        <outlet property="preyImage" destination="NDj-Sy-7Cq" id="7PQ-uf-7ed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw6-Gd-tsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -288,7 +295,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cO7-yx-jKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="1806"/>
+            <point key="canvasLocation" x="564" y="1750"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BMg-iq-rKA">
+            <objects>
+                <viewController id="Rce-bE-yoH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qll-VN-JP4"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Zl-i1-oU3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7YX-cO-rX9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQI-88-eww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="1750"/>
         </scene>
         <!--Item-->
         <scene sceneID="cCQ-af-gUC">
@@ -308,10 +333,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbQ-qv-vEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="807"/>
+            <point key="canvasLocation" x="460" y="807"/>
         </scene>
     </scenes>
     <resources>
+        <image name="background2" width="210" height="336"/>
         <image name="phone" width="209" height="336"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -320,6 +346,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="2gl-tD-mWa"/>
+        <segue reference="Ugn-pt-NDQ"/>
     </inferredMetricsTieBreakers>
 </document>
