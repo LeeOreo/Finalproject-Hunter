@@ -22,6 +22,8 @@
 		93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9475A1AEFCDD40021635C /* HTMapViewController.m */; };
 		93C9475D1AF0FB350021635C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9475C1AF0FB350021635C /* MapKit.framework */; };
 		93C9475F1AF0FC910021635C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9475C1AF0FB350021635C /* MapKit.framework */; };
+		93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7361AFCD651001274B7 /* SWRevealViewController.m */; };
+		93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7391AFCD82A001274B7 /* SidebarViewController.m */; };
 		BB10617F65910436C5368948 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1DFEC44C2FF36CCD99AF82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,10 @@
 		93C947591AEFCDD40021635C /* HTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMapViewController.h; sourceTree = "<group>"; };
 		93C9475A1AEFCDD40021635C /* HTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMapViewController.m; sourceTree = "<group>"; };
 		93C9475C1AF0FB350021635C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		93CFF7351AFCD651001274B7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		93CFF7361AFCD651001274B7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		93CFF7381AFCD82A001274B7 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		93CFF7391AFCD82A001274B7 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				934085991AF3DE65004F4031 /* HTConst.h */,
+				93CFF7341AFCD619001274B7 /* SWRevealViewController */,
 				9369F8031AFA38AF008ADAC5 /* GlobalLocationData */,
 				93C947511AEFBAC20021635C /* ViewController */,
 				93C9472F1AEFB7D40021635C /* AppDelegate.h */,
@@ -176,6 +183,8 @@
 			children = (
 				93C947531AEFBD060021635C /* HTLoginViewController.h */,
 				93C947541AEFBD060021635C /* HTLoginViewController.m */,
+				93CFF7381AFCD82A001274B7 /* SidebarViewController.h */,
+				93CFF7391AFCD82A001274B7 /* SidebarViewController.m */,
 				9369F7C21AF8D913008ADAC5 /* HTCountDownViewController.h */,
 				9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */,
 				93C947591AEFCDD40021635C /* HTMapViewController.h */,
@@ -184,6 +193,15 @@
 				9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		93CFF7341AFCD619001274B7 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93CFF7351AFCD651001274B7 /* SWRevealViewController.h */,
+				93CFF7361AFCD651001274B7 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		D1EA8D714AFCA3F490B89AE6 /* Frameworks */ = {
@@ -342,6 +360,8 @@
 				9369F8061AFA38F3008ADAC5 /* HTLocationData.m in Sources */,
 				93C947311AEFB7D40021635C /* AppDelegate.m in Sources */,
 				93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */,
+				93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */,
+				93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */,
 				9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */,
 				93C9472E1AEFB7D40021635C /* main.m in Sources */,
 				93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */,

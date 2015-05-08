@@ -39,64 +39,13 @@
     [self.myMap setShowsUserLocation:YES];
     [self.myMap setDelegate:self];
 
-//*********************************************************************************************
-    
-    //set prey distance~~~~~~~~~~~~~
-    
-    
-    
-//    
-//    PFGeoPoint *myGeoPoint = [PFGeoPoint geoPointWithLatitude:appDel.userLocation.location.coordinate.latitude longitude:appDel.userLocation.location.coordinate.longitude];
-//    
-   // PFObject *userlocation = [PFObject objectWithClassName:@"userLocation"];
-   // userlocation[@"userLocation"] = myGeoPoint;
-    
-//    NSMutableArray *preyArray = [[NSMutableArray alloc] init];
-
-    // User's location
-//    PFGeoPoint *myGeoPoint = userObject[@"userLocation"];
-    // Create a query for places
-//    PFQuery *query = [PFUser query];
-    // Interested in locations near user.
-//    [query whereKey:@"userLocation" nearGeoPoint:myGeoPoint];
-    // Limit what could be a lot of points.
-//    query.limit = 4;
-    // Final list of objects
-//    [preyArray addObject:[query findObjects]];
-    
-//    NSArray *array = [query findObjects];
-//    NSLog(@"array %d",array.count);
-    
-    
-//    PFQuery *query2 = [PFUser query];
-//    [query2 findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        
-//        NSLog(@"aaaa %@,%@",objects,error);
-//        
-//    }];
-
-
-    
-//    CLLocationDistance distance = [myGeoPoint distanceFromLocation:preylocation];
-    
-    
-//    CLLocationDistance distance = [userGeoPoint distanceFromLocation:];
-//    NSLog(@"distance is : %f",distance);
-    
-//***********************************************************************************************
-    //assure user location is right
-    NSLog(@"現在經緯 : %f,%f",appDel.userLocation.location.coordinate.latitude,appDel.userLocation.location.coordinate.longitude);
-    
     
     self.circleOverlay = [MKCircle circleWithCenterCoordinate:appDel.userLocation.location.coordinate radius:100];
     [_myMap addOverlay:self.circleOverlay];
     
-    
-    
-//    CLLocationAccuracy filterDistance = [[NSUserDefaults standardUserDefaults] doubleForKey:UserDefaultsFilterDistanceKey];
-
 }
 
+    //set attack distance
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay {
     if ([overlay isKindOfClass:[MKCircle class]]) {
         MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithCircle:self.circleOverlay];
@@ -108,10 +57,10 @@
     return nil;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    AppDelegate* appDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    self.myMap.centerCoordinate = CLLocationCoordinate2DMake(appDel.userLocation.location.coordinate.latitude,appDel.userLocation.location.coordinate.longitude);
-}
+//- (void)viewDidAppear:(BOOL)animated {
+//    AppDelegate* appDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+//    self.myMap.centerCoordinate = CLLocationCoordinate2DMake(appDel.userLocation.location.coordinate.latitude,appDel.userLocation.location.coordinate.longitude);
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
