@@ -42,6 +42,9 @@
 //*********************************************************************************************
     
     //set prey distance~~~~~~~~~~~~~
+    
+    
+    
 //    
 //    PFGeoPoint *myGeoPoint = [PFGeoPoint geoPointWithLatitude:appDel.userLocation.location.coordinate.latitude longitude:appDel.userLocation.location.coordinate.longitude];
 //    

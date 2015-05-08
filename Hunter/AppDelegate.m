@@ -121,6 +121,7 @@
         PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
         [user setObject: userGeoPoint forKey: @"userLocation"];
         [user saveInBackground];
+        NSLog(@"userGeoPoint : %@",userGeoPoint);
 
     }
     NSLog(@"%6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);

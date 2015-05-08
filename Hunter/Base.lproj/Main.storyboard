@@ -26,9 +26,6 @@
                                     <outletCollection property="gestureRecognizers" destination="J57-bP-Fbh" appends="YES" id="w2A-q2-xon"/>
                                 </connections>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="41o-lK-zRN">
-                                <rect key="frame" x="141" y="446" width="39" height="37"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB1-Wt-ujp">
                                 <rect key="frame" x="137" y="491" width="46" height="30"/>
                                 <state key="normal" title="Login">
@@ -38,6 +35,9 @@
                                     <action selector="fbLoginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tdj-vO-HPc"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="41o-lK-zRN">
+                                <rect key="frame" x="141" y="446" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -175,9 +175,9 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="cZK-W9-FRt" id="mOS-sF-UD1"/>
-                        <outlet property="preyDistance1" destination="A14-OZ-0vh" id="oUc-1X-JT1"/>
-                        <outlet property="preyDistance2" destination="6od-p5-AZH" id="eY0-WK-Ca2"/>
-                        <outlet property="preyDistance3" destination="49O-S2-MEh" id="nbt-UN-JEU"/>
+                        <outlet property="preyDistanceOne" destination="A14-OZ-0vh" id="oTL-Lt-ZzZ"/>
+                        <outlet property="preyDistanceThree" destination="49O-S2-MEh" id="2tb-5k-0aV"/>
+                        <outlet property="preyDistanceTwo" destination="6od-p5-AZH" id="rUz-lM-FMr"/>
                         <outlet property="preyImage1" destination="ev7-E1-qR3" id="VQb-EU-khf"/>
                         <outlet property="preyImage2" destination="UX8-le-qKu" id="QD1-Pm-Nnc"/>
                         <outlet property="preyImage3" destination="6qh-Vy-0c7" id="fNn-NS-157"/>
@@ -202,33 +202,33 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="k1B-bI-znL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVZ-Du-PEF">
-                                <rect key="frame" x="245" y="93" width="59" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="將" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVZ-Du-PEF">
+                                <rect key="frame" x="16" y="492" width="59" height="21"/>
+                                <color key="backgroundColor" red="0.77458742339999997" green="1" blue="0.96604162159999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-Hj-UHq">
-                                <rect key="frame" x="122" y="492" width="77" height="30"/>
+                                <rect key="frame" x="227" y="473" width="77" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1929827593" blue="0.35360905650000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Hunter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How long" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3X-OV-uwn">
-                                <rect key="frame" x="104" y="93" width="121" height="21"/>
+                                <rect key="frame" x="16" y="451" width="121" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-Ap-aJN">
-                                <rect key="frame" x="0.0" y="180" width="320" height="263"/>
+                                <rect key="frame" x="16" y="72" width="288" height="371"/>
                                 <connections>
                                     <outlet property="delegate" destination="6CX-jr-IQN" id="1Dr-br-O4k"/>
                                 </connections>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-Sy-7Cq">
-                                <rect key="frame" x="16" y="72" width="80" height="80"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -252,7 +252,6 @@
                     <connections>
                         <outlet property="myMap" destination="bTM-Ap-aJN" id="rhg-p6-dDQ"/>
                         <outlet property="preyDistance" destination="s3X-OV-uwn" id="DxP-4f-e1q"/>
-                        <outlet property="preyImage" destination="NDj-Sy-7Cq" id="7PQ-uf-7ed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw6-Gd-tsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cO7-yx-jKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564" y="1750"/>
+            <point key="canvasLocation" x="516" y="1793"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BMg-iq-rKA">
@@ -313,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQI-88-eww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="1750"/>
+            <point key="canvasLocation" x="963" y="1612"/>
         </scene>
         <!--Item-->
         <scene sceneID="cCQ-af-gUC">

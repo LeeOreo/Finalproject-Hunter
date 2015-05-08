@@ -13,7 +13,6 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *myMap;
 
-@property (weak, nonatomic) IBOutlet UIImageView *preyImage;
 
 @property (weak, nonatomic) IBOutlet UILabel *preyDistance;
 

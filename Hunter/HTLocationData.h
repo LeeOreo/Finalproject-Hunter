@@ -11,10 +11,16 @@
 
 @interface HTLocationData : NSObject
 
--(NSArray *)getPreyLocationData;
+@property (strong, nonatomic) NSString *preyDistance1;
+@property (strong, nonatomic) NSString *preyDistance2;
+@property (strong, nonatomic) NSString *preyDistance3;
 
-@property (nonatomic,strong ) UIImage *preyImage1;
-@property (nonatomic,strong ) UIImage *preyImage2;
-@property (nonatomic,strong ) UIImage *preyImage3;
+@property (strong, nonatomic) UIImage *preyPhoto1;
+@property (strong, nonatomic) UIImage *preyPhoto2;
+@property (strong, nonatomic) UIImage *preyPhoto3;
+
++(HTLocationData *)sharePreyDistance;
+
+- (NSArray *)getPreyData;
 
 @end

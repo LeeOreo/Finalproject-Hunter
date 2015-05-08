@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-iOS-Slide-Menu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>325DF31626F031ADC40060CE</key>
+		<key>269CC43F955F86D8EB69A86E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50BA54C99837D09C2A1ED0B6</key>
+		<key>3570E41F0B2C7F8A9F3E93FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C6AF2C24C5156B8658B9AA3</key>
+		<key>5C9FAC9EA99975D735F9A893</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD666882C8475E8BA8B09123</key>
+		<key>8ED531EC7E04C7EF35D1A866</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EE1DBFBED58EB78B5E656138</key>
+		<key>E563D6D6B049556975AB7DB3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB92C8DCA5F55D5B440BB4A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -97,13 +97,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9369F8031AFA38AF008ADAC5 /* LocationData */ = {
+		9369F8031AFA38AF008ADAC5 /* GlobalLocationData */ = {
 			isa = PBXGroup;
 			children = (
 				9369F8041AFA38F3008ADAC5 /* HTLocationData.h */,
 				9369F8051AFA38F3008ADAC5 /* HTLocationData.m */,
 			);
-			name = LocationData;
+			name = GlobalLocationData;
 			sourceTree = "<group>";
 		};
 		93C9471F1AEFB7D40021635C = {
@@ -131,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				934085991AF3DE65004F4031 /* HTConst.h */,
-				9369F8031AFA38AF008ADAC5 /* LocationData */,
+				9369F8031AFA38AF008ADAC5 /* GlobalLocationData */,
 				93C947511AEFBAC20021635C /* ViewController */,
 				93C9472F1AEFB7D40021635C /* AppDelegate.h */,
 				93C947301AEFB7D40021635C /* AppDelegate.m */,
