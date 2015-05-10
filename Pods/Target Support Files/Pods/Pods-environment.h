@@ -42,6 +42,12 @@
 #define COCOAPODS_VERSION_MINOR_ParseFacebookUtils 7
 #define COCOAPODS_VERSION_PATCH_ParseFacebookUtils 2
 
+// UIView+AnimationExtensions
+#define COCOAPODS_POD_AVAILABLE_UIView_AnimationExtensions
+#define COCOAPODS_VERSION_MAJOR_UIView_AnimationExtensions 1
+#define COCOAPODS_VERSION_MINOR_UIView_AnimationExtensions 0
+#define COCOAPODS_VERSION_PATCH_UIView_AnimationExtensions 0
+
 // iOS-Slide-Menu
 #define COCOAPODS_POD_AVAILABLE_iOS_Slide_Menu
 #define COCOAPODS_VERSION_MAJOR_iOS_Slide_Menu 1

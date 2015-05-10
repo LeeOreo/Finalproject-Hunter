@@ -83,6 +83,7 @@
     
     //set prey3 distance
     
+    
     PFGeoPoint *tempLocation3 = [array[3] objectForKey:@"userLocation"];
     
     CLLocation *preylocation3 = [[CLLocation alloc]initWithLatitude:tempLocation3.latitude longitude:tempLocation3.longitude];

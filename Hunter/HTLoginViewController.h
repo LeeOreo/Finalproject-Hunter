@@ -9,12 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HTLoginViewController : UIViewController
-{
-    NSMutableArray *array;
-}
-@property (weak, nonatomic) IBOutlet UIImageView *teachImage;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageCtrl;
 
-- (void) showImage;
 
 @end

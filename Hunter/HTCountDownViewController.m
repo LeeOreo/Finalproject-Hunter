@@ -8,6 +8,7 @@
 
 #import "HTCountDownViewController.h"
 
+
 @interface HTCountDownViewController ()
 
 @end
@@ -31,6 +32,10 @@
                                            userInfo:nil
                                             repeats:YES];
 }
+
+
+
+
 
 - (void)countDown {
     seconds --;

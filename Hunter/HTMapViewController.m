@@ -37,7 +37,7 @@
     
     //設定初始地圖大小
     [self.myMap setRegion:MKCoordinateRegionMake(appDel.userLocation.location.coordinate, MKCoordinateSpanMake(0.003f, 0.003f)) animated:YES];
-    [self.myMap setShowsUserLocation:YES];
+    [self.myMap setShowsUserLocation:NO];
     [self.myMap setDelegate:self];
 
     

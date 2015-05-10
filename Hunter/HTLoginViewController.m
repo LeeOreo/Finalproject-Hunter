@@ -14,6 +14,12 @@
 
 @interface HTLoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *teachScrollView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *teachImageView;
+
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
 @end
 
 @implementation HTLoginViewController
@@ -21,41 +27,56 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    array = [[NSMutableArray alloc] initWithObjects:@"1", @"2", @"3", nil];
-    self.pageCtrl.numberOfPages = [array count];
-    [self showImage];
-}
+    
+    float width = (_teachImageView.frame.size.width);
+    float height = (_teachImageView.frame.size.height);
+    
+    self.teachScrollView.contentSize = CGSizeMake(width*3, height);
+    
+    NSArray *teachImageArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed: @"TeachPage1.jpg"],[UIImage imageNamed:@"TeachPage2.jpg"],[UIImage imageNamed:@"TeachPage3.jpg"], nil];
+    NSLog(@"%@",teachImageArray[0]);
+    NSLog(@"%@",teachImageArray[1]);
+    NSLog(@"%@",teachImageArray[2]);
 
+    
+//    UIImageView *teachImage1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TeachPage1"]];
+//    UIImageView *teachImage2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TeachPage2"]];
+//    UIImageView *teachImage3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TeachPage3"]];
+//
+//
+//    [teachImageArray arrayByAddingObject:teachImage1];
+//    NSLog(@"%@",teachImageArray);
+//    [teachImageArray arrayByAddingObject:teachImage2];
+//    [teachImageArray arrayByAddingObject:teachImage3];
 
-//show the image
-- (void) showImage {
-    NSString *filename = [array objectAtIndex:self.pageCtrl.currentPage];
-    self.teachImage.image = [UIImage imageNamed:filename];
-}
-
-- (IBAction)teachPageSwipe:(UISwipeGestureRecognizer *)sender {
-    switch (sender.direction) {
-        case UISwipeGestureRecognizerDirectionLeft:
-            //left
-            if (self.pageCtrl.currentPage < [array count]) {
-                self.pageCtrl.currentPage++;
-                [self showImage];
-            }
-            break;
-        case UISwipeGestureRecognizerDirectionRight:
-            //right
-            if (self.pageCtrl.currentPage > 0) {
-                self.pageCtrl.currentPage--;
-                [self showImage];
-            }
-            break;
-        default:;
+    for (int i = 0; i<3; i++) {
+        NSLog(@"yoyoyo");
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
+        imageView.image = teachImageArray[i];
+        imageView.clipsToBounds = YES;
+        [self.teachScrollView addSubview:imageView];
     }
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return self.teachImageView;
+}
+
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    
+    self.pageControl.currentPage = page;
+}
+
 
 
 #pragma mark - FB data to Parse
@@ -86,9 +107,6 @@
                 NSLog(@"User with facebook logged in!");
                 
             }
-            
-//            UINavigationController *mapVC = [self.storyboard instantiateViewControllerWithIdentifier:@"mapVC"];
-//            [self presentViewController:mapVC animated:YES completion:nil];
             
             UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
             [self presentViewController:slidemenuVC animated:YES completion:nil];
@@ -121,7 +139,6 @@
             [[PFUser currentUser] setObject:pictureURL forKey:@"pictureURL"];
             [[PFUser currentUser] setObject:email forKey:@"email"];
 
-//            PFGeoPoint *myLocation = [PFGeoPoint geoPointWithLatitude: longitude:];
             
             [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
                 if (!error) {

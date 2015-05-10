@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HKb-rH-a3X">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
@@ -18,16 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-H9-rky">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="438"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Bj6-ra-Zh2" appends="YES" id="YQI-jJ-pGU"/>
-                                    <outletCollection property="gestureRecognizers" destination="J57-bP-Fbh" appends="YES" id="w2A-q2-xon"/>
-                                </connections>
-                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="41o-lK-zRN">
+                                <rect key="frame" x="141" y="464" width="39" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEs-dh-d67">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="456"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCn-Sc-Y2g">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="456"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="456" id="Efs-z2-Zgd"/>
+                                </constraints>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB1-Wt-ujp">
-                                <rect key="frame" x="137" y="491" width="46" height="30"/>
+                                <rect key="frame" x="106" y="509" width="109" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,34 +41,21 @@
                                     <action selector="fbLoginButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tdj-vO-HPc"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="41o-lK-zRN">
-                                <rect key="frame" x="141" y="446" width="39" height="37"/>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="SbG-H9-rky" secondAttribute="bottom" constant="130" id="9Fb-3m-C4I"/>
-                            <constraint firstItem="SbG-H9-rky" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="MZe-FH-JYv"/>
-                            <constraint firstItem="SbG-H9-rky" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="akJ-pO-OGF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SbG-H9-rky" secondAttribute="trailing" constant="-16" id="g0U-4Z-n8n"/>
+                            <constraint firstItem="VEs-dh-d67" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Qc2-v2-hvQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VEs-dh-d67" secondAttribute="trailing" constant="-16" id="Slh-Ym-ZK7"/>
+                            <constraint firstItem="VEs-dh-d67" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="YyU-YE-xcc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pageCtrl" destination="41o-lK-zRN" id="zLu-VT-vcu"/>
-                        <outlet property="teachImage" destination="SbG-H9-rky" id="PEO-nx-qF1"/>
+                        <outlet property="pageControl" destination="41o-lK-zRN" id="jyp-eL-7qk"/>
+                        <outlet property="teachImageView" destination="eCn-Sc-Y2g" id="aMz-9B-CpA"/>
+                        <outlet property="teachScrollView" destination="VEs-dh-d67" id="evI-HN-4Wf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="Bj6-ra-Zh2">
-                    <connections>
-                        <action selector="teachPageSwipe:" destination="vXZ-lx-hvc" id="gh8-jI-jX1"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="J57-bP-Fbh">
-                    <connections>
-                        <action selector="teachPageSwipe:" destination="vXZ-lx-hvc" id="8oT-E6-2UL"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-906" y="1876"/>
         </scene>
@@ -246,7 +239,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CSD-rf-yAl" kind="modal" identifier="preyInfo1" modalTransitionStyle="coverVertical" id="b9o-w8-HJO"/>
+                                    <segue destination="CSD-rf-yAl" kind="modal" identifier="preyInfo1" modalTransitionStyle="partialCurl" id="b9o-w8-HJO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1M-Ew-z5r">
@@ -256,7 +249,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CSD-rf-yAl" kind="modal" identifier="preyInfo2" modalTransitionStyle="coverVertical" id="8eX-Fa-AOe"/>
+                                    <segue destination="CSD-rf-yAl" kind="modal" identifier="preyInfo2" modalTransitionStyle="partialCurl" id="8eX-Fa-AOe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpG-hc-8mu">
@@ -266,7 +259,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CSD-rf-yAl" kind="modal" identifier="preyInfo3" modalTransitionStyle="coverVertical" id="WDe-9K-F59"/>
+                                    <segue destination="CSD-rf-yAl" kind="modal" identifier="preyInfo3" modalTransitionStyle="partialCurl" id="WDe-9K-F59"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDv-Yl-pao">
@@ -446,7 +439,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cO7-yx-jKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="387" y="1468"/>
+            <point key="canvasLocation" x="591" y="1460"/>
+        </scene>
+        <!--Animation Test-->
+        <scene sceneID="vi5-cB-wQz">
+            <objects>
+                <viewController id="HKb-rH-a3X" customClass="AnimationTest" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="80A-XV-0Ho"/>
+                        <viewControllerLayoutGuide type="bottom" id="3p0-4V-hgl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pmC-xD-qhn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TeachPage3" translatesAutoresizingMaskIntoConstraints="NO" id="hN4-K8-uK3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rq-SO-7Qk">
+                                <rect key="frame" x="137" y="403" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="HKb-rH-a3X" eventType="touchUpInside" id="J9W-2s-BXI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="boxView" destination="hN4-K8-uK3" id="i1W-f0-kBE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgt-6e-BcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="2161"/>
         </scene>
         <!--Rank View Controller-->
         <scene sceneID="BMg-iq-rKA">
@@ -603,6 +631,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="TeachPage3" width="540" height="720"/>
         <image name="background2" width="210" height="336"/>
         <image name="phone" width="209" height="336"/>
         <image name="phone.jpg" width="209" height="336"/>
@@ -613,8 +642,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UWU-Vs-ac7"/>
+        <segue reference="WDe-9K-F59"/>
         <segue reference="fdE-hp-PT4"/>
-        <segue reference="b9o-w8-HJO"/>
+        <segue reference="UWU-Vs-ac7"/>
     </inferredMetricsTieBreakers>
 </document>

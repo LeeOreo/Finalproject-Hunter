@@ -14,12 +14,14 @@ PODS:
     - Bolts (~> 1.1)
     - Facebook-iOS-SDK (~> 3.23)
     - Parse (~> 1.7.2)
+  - UIView+AnimationExtensions (1.0.0)
 
 DEPENDENCIES:
   - Facebook-iOS-SDK
   - iOS-Slide-Menu
   - Parse
   - ParseFacebookUtils
+  - UIView+AnimationExtensions
 
 SPEC CHECKSUMS:
   Bolts: aac24961496d504aa56fc267cde95162a71bac39
@@ -27,5 +29,6 @@ SPEC CHECKSUMS:
   iOS-Slide-Menu: 3a8b157f87694fce888899f169e05b433575ff90
   Parse: e1959adb9fe2fcd4736dac20b3ac691d47a4f06c
   ParseFacebookUtils: 26f436ad7da9fc39acb4784c01cfcef0ea3a9709
+  UIView+AnimationExtensions: f9ae95fa3064be09cf2fcaac1fb1948ee22397ec
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.37.1

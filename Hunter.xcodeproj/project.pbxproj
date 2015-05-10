@@ -27,6 +27,8 @@
 		93C9475F1AF0FC910021635C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9475C1AF0FB350021635C /* MapKit.framework */; };
 		93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7361AFCD651001274B7 /* SWRevealViewController.m */; };
 		93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7391AFCD82A001274B7 /* SidebarViewController.m */; };
+		93D42EAA1AFF8CD100E06F5D /* AnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D42EA91AFF8CD100E06F5D /* AnimationTest.m */; };
+		93D42EB01AFF8EE100E06F5D /* UIView+AnimationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D42EAF1AFF8EE100E06F5D /* UIView+AnimationExtensions.m */; };
 		BB10617F65910436C5368948 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1DFEC44C2FF36CCD99AF82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,11 @@
 		93CFF7361AFCD651001274B7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		93CFF7381AFCD82A001274B7 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		93CFF7391AFCD82A001274B7 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		93D42EA41AFF80F900E06F5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93D42EA81AFF8CD100E06F5D /* AnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTest.h; sourceTree = "<group>"; };
+		93D42EA91AFF8CD100E06F5D /* AnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTest.m; sourceTree = "<group>"; };
+		93D42EAE1AFF8EE100E06F5D /* UIView+AnimationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationExtensions.h"; sourceTree = "<group>"; };
+		93D42EAF1AFF8EE100E06F5D /* UIView+AnimationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationExtensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +161,7 @@
 		93C9472A1AEFB7D40021635C /* Hunter */ = {
 			isa = PBXGroup;
 			children = (
+				93D42EA61AFF8C7000E06F5D /* Animation */,
 				934085991AF3DE65004F4031 /* HTConst.h */,
 				93CFF7341AFCD619001274B7 /* SWRevealViewController */,
 				9369F8031AFA38AF008ADAC5 /* Object */,
@@ -227,9 +235,21 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		93D42EA61AFF8C7000E06F5D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				93D42EA81AFF8CD100E06F5D /* AnimationTest.h */,
+				93D42EA91AFF8CD100E06F5D /* AnimationTest.m */,
+				93D42EAE1AFF8EE100E06F5D /* UIView+AnimationExtensions.h */,
+				93D42EAF1AFF8EE100E06F5D /* UIView+AnimationExtensions.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
 		D1EA8D714AFCA3F490B89AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93D42EA41AFF80F900E06F5D /* QuartzCore.framework */,
 				93C9475C1AF0FB350021635C /* MapKit.framework */,
 				8C1DFEC44C2FF36CCD99AF82 /* libPods.a */,
 			);
@@ -387,10 +407,12 @@
 				9301632A1AFF11830045FA52 /* HTRankViewCell.m in Sources */,
 				93C947311AEFB7D40021635C /* AppDelegate.m in Sources */,
 				93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */,
+				93D42EB01AFF8EE100E06F5D /* UIView+AnimationExtensions.m in Sources */,
 				93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */,
 				93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */,
 				9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */,
 				93C9472E1AEFB7D40021635C /* main.m in Sources */,
+				93D42EAA1AFF8CD100E06F5D /* AnimationTest.m in Sources */,
 				93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
