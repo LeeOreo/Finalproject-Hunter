@@ -65,11 +65,10 @@
     
     CLLocation *preylocation1 = [[CLLocation alloc]initWithLatitude:tempLocation1.latitude longitude:tempLocation1.longitude];
     
-    double distance1 = [appDel.userLocation.location distanceFromLocation:preylocation1];
+    int distance1 = [appDel.userLocation.location distanceFromLocation:preylocation1];
 
-    self.preyDistance1 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%1f",distance1]];
-    NSLog(@"kkkkkkkkkkkkkk%@",_preyDistance1);
-    
+    self.preyDistance1 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%d m",distance1]];
+    NSLog(@"preyDistance1 is : %@",_preyDistance1);
     
     //set prey2 distance
     
@@ -77,9 +76,9 @@
     
     CLLocation *preylocation2 = [[CLLocation alloc]initWithLatitude:tempLocation2.latitude longitude:tempLocation2.longitude];
     
-    double distance2 = [appDel.userLocation.location distanceFromLocation:preylocation2];
+    int distance2 = [appDel.userLocation.location distanceFromLocation:preylocation2];
     
-    self.preyDistance2 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%1f",distance2]];
+    self.preyDistance2 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%d m",distance2]];
 
     
     //set prey3 distance
@@ -88,9 +87,9 @@
     
     CLLocation *preylocation3 = [[CLLocation alloc]initWithLatitude:tempLocation3.latitude longitude:tempLocation3.longitude];
     
-    double distance3 = [appDel.userLocation.location distanceFromLocation:preylocation3];
+    int distance3 = [appDel.userLocation.location distanceFromLocation:preylocation3];
     
-    self.preyDistance3 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%1f",distance3]];
+    self.preyDistance3 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%d m",distance3]];
     
     
 
@@ -114,9 +113,42 @@
     NSData *imageData3 = [NSData dataWithContentsOfURL:imageURL3];
     _preyPhoto3 = [UIImage imageWithData:imageData3];
     
+    
+ 
+//******************************設定獵物是否Attack!*********************************************
+    
+    //check prey attack?
+    
+    self.checkAttack1 = (BOOL) [array[1] objectForKey:@"Attack"];
+    self.checkAttack2 = (BOOL) [array[2] objectForKey:@"Attack"];
+    self.checkAttack3 = (BOOL) [array[3] objectForKey:@"Attack"];
+    
+    
+    
     return array;
 }
 
+//- (void)setCheckAttack1:(BOOL)checkAttack1 {
+//    checkAttack1 = YES;
+//    _checkAttack1 = checkAttack1;
+//    //push to Parse
+//    
+//    [[PFUser currentUser] saveInBackground];
+//}
+//
+//
+//- (void)setCheckAttack2:(BOOL)checkAttack2 {
+//    _checkAttack2 = checkAttack2;
+//    //push to Parse
+//    [[PFUser currentUser] saveInBackground];
+//}
+//
+//
+//- (void)setCheckAttack3:(BOOL)checkAttack3 {
+//    _checkAttack3 = checkAttack3;
+//    //push to Parse
+//    [[PFUser currentUser] saveInBackground];
+//}
 
 
 @end

@@ -13,6 +13,8 @@
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "HTLocationData.h"
+#import "HT3PreyViewController.h"
 
 @interface HTMapViewController ()  <MKMapViewDelegate>
 
@@ -26,7 +28,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
     MKPointAnnotation *point;
     
@@ -43,6 +44,12 @@
     self.circleOverlay = [MKCircle circleWithCenterCoordinate:appDel.userLocation.location.coordinate radius:100];
     [_myMap addOverlay:self.circleOverlay];
     
+    HTLocationData *preyData = [HTLocationData sharePreyDistance];
+    [preyData getPreyData];
+    
+    _preyDistance.text = preyData.preyDistance1;
+
+    NSLog(@"kokokokokok : %@",_preyDistance.text);
 }
 
     //set attack distance
@@ -65,6 +72,37 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+
+
+- (IBAction)attack:(id)sender {
+    
+    HTLocationData *preyData = [HTLocationData sharePreyDistance];
+    [preyData getPreyData];
+    
+    preyData.checkAttack1 = YES;
+    
+    [[PFUser currentUser] saveInBackground];
+    
+    if ([PFUser.currentUser objectForKey:@"Attack"]==YES) {
+        NSLog(@"success");
+    }else{
+        NSLog(@"NONONONONONONONONONO");
+    }
+    
+    
+    
+//    if (preyData.checkAttack1 == YES) {
+//        NSLog(@"hihihihihihihihihihihihihihi");
+//    }else if (preyData.checkAttack2) {
+//        
+//    }else if (preyData.checkAttack3) {
+//        
+//    }
+
 }
 
 //********************************************************************************************

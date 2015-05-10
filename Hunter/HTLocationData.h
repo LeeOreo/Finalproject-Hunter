@@ -19,6 +19,10 @@
 @property (strong, nonatomic) UIImage *preyPhoto2;
 @property (strong, nonatomic) UIImage *preyPhoto3;
 
+@property (nonatomic) BOOL checkAttack1;
+@property (nonatomic) BOOL checkAttack2;
+@property (nonatomic) BOOL checkAttack3;
+
 +(HTLocationData *)sharePreyDistance;
 
 - (NSArray *)getPreyData;

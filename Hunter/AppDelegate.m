@@ -11,6 +11,8 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <CoreLocation/CoreLocation.h>
 #import "HTConst.h"
+#import "HTLocationData.h"
+
 
 @interface AppDelegate () <CLLocationManagerDelegate>
 
@@ -31,6 +33,13 @@
     [PFFacebookUtils initializeFacebook];
     [self getUserLocation];
     
+    
+    //set timer for update location
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1
+                                                        target: self
+                                                      selector: @selector(updateLocation:)
+                                                      userInfo: nil
+                                                       repeats: YES];
     
     
     // 設定攻擊範圍
@@ -111,6 +120,13 @@
 
 }
 
+- (void) updateLocation : (NSTimer *) timer {
+
+    [_userLocation stopUpdatingLocation];
+    [_userLocation startUpdatingLocation];
+    
+
+}
 
     //upload coordinate to parse~~~~~~~~~~
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -121,10 +137,9 @@
         PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
         [user setObject: userGeoPoint forKey: @"userLocation"];
         [user saveInBackground];
-        NSLog(@"userGeoPoint : %@",userGeoPoint);
-
+        
+        NSLog(@"updated");
     }
-    NSLog(@"%6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);
 }
 
 

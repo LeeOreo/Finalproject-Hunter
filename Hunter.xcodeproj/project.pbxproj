@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930163201AFD82AD0045FA52 /* HTRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9301631F1AFD82AD0045FA52 /* HTRankViewController.m */; };
+		930163261AFEFC4B0045FA52 /* HTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930163251AFEFC4B0045FA52 /* HTProfileViewController.m */; };
+		9301632A1AFF11830045FA52 /* HTRankViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 930163291AFF11830045FA52 /* HTRankViewCell.m */; };
 		9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */; };
 		9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */; };
 		9369F8021AFA2551008ADAC5 /* phone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9369F8011AFA2551008ADAC5 /* phone.jpg */; };
@@ -41,6 +44,12 @@
 		31DB99CE9EC3F2E8E5F68CE9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		43BDC28050C42F2991547390 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8C1DFEC44C2FF36CCD99AF82 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9301631E1AFD82AD0045FA52 /* HTRankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRankViewController.h; sourceTree = "<group>"; };
+		9301631F1AFD82AD0045FA52 /* HTRankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRankViewController.m; sourceTree = "<group>"; };
+		930163241AFEFC4B0045FA52 /* HTProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTProfileViewController.h; sourceTree = "<group>"; };
+		930163251AFEFC4B0045FA52 /* HTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTProfileViewController.m; sourceTree = "<group>"; };
+		930163281AFF11830045FA52 /* HTRankViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRankViewCell.h; sourceTree = "<group>"; };
+		930163291AFF11830045FA52 /* HTRankViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRankViewCell.m; sourceTree = "<group>"; };
 		934085991AF3DE65004F4031 /* HTConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTConst.h; sourceTree = "<group>"; };
 		9369F7C21AF8D913008ADAC5 /* HTCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCountDownViewController.h; sourceTree = "<group>"; };
 		9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCountDownViewController.m; sourceTree = "<group>"; };
@@ -103,13 +112,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9369F8031AFA38AF008ADAC5 /* GlobalLocationData */ = {
+		930163271AFF113E0045FA52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				930163281AFF11830045FA52 /* HTRankViewCell.h */,
+				930163291AFF11830045FA52 /* HTRankViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9369F8031AFA38AF008ADAC5 /* Object */ = {
 			isa = PBXGroup;
 			children = (
 				9369F8041AFA38F3008ADAC5 /* HTLocationData.h */,
 				9369F8051AFA38F3008ADAC5 /* HTLocationData.m */,
 			);
-			name = GlobalLocationData;
+			name = Object;
 			sourceTree = "<group>";
 		};
 		93C9471F1AEFB7D40021635C = {
@@ -138,7 +156,8 @@
 			children = (
 				934085991AF3DE65004F4031 /* HTConst.h */,
 				93CFF7341AFCD619001274B7 /* SWRevealViewController */,
-				9369F8031AFA38AF008ADAC5 /* GlobalLocationData */,
+				9369F8031AFA38AF008ADAC5 /* Object */,
+				930163271AFF113E0045FA52 /* View */,
 				93C947511AEFBAC20021635C /* ViewController */,
 				93C9472F1AEFB7D40021635C /* AppDelegate.h */,
 				93C947301AEFB7D40021635C /* AppDelegate.m */,
@@ -183,14 +202,16 @@
 			children = (
 				93C947531AEFBD060021635C /* HTLoginViewController.h */,
 				93C947541AEFBD060021635C /* HTLoginViewController.m */,
-				93CFF7381AFCD82A001274B7 /* SidebarViewController.h */,
-				93CFF7391AFCD82A001274B7 /* SidebarViewController.m */,
 				9369F7C21AF8D913008ADAC5 /* HTCountDownViewController.h */,
 				9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */,
 				93C947591AEFCDD40021635C /* HTMapViewController.h */,
 				93C9475A1AEFCDD40021635C /* HTMapViewController.m */,
 				9369F7FE1AFA0891008ADAC5 /* HT3PreyViewController.h */,
 				9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */,
+				9301631E1AFD82AD0045FA52 /* HTRankViewController.h */,
+				9301631F1AFD82AD0045FA52 /* HTRankViewController.m */,
+				930163241AFEFC4B0045FA52 /* HTProfileViewController.h */,
+				930163251AFEFC4B0045FA52 /* HTProfileViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -200,6 +221,8 @@
 			children = (
 				93CFF7351AFCD651001274B7 /* SWRevealViewController.h */,
 				93CFF7361AFCD651001274B7 /* SWRevealViewController.m */,
+				93CFF7381AFCD82A001274B7 /* SidebarViewController.h */,
+				93CFF7391AFCD82A001274B7 /* SidebarViewController.m */,
 			);
 			name = SWRevealViewController;
 			sourceTree = "<group>";
@@ -265,6 +288,7 @@
 				TargetAttributes = {
 					93C947271AEFB7D40021635C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 8H7X36TF25;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -356,8 +380,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */,
+				930163261AFEFC4B0045FA52 /* HTProfileViewController.m in Sources */,
+				930163201AFD82AD0045FA52 /* HTRankViewController.m in Sources */,
 				93C947341AEFB7D40021635C /* ViewController.m in Sources */,
 				9369F8061AFA38F3008ADAC5 /* HTLocationData.m in Sources */,
+				9301632A1AFF11830045FA52 /* HTRankViewCell.m in Sources */,
 				93C947311AEFB7D40021635C /* AppDelegate.m in Sources */,
 				93C947551AEFBD060021635C /* HTLoginViewController.m in Sources */,
 				93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */,
@@ -491,10 +518,13 @@
 			baseConfigurationReference = 31DB99CE9EC3F2E8E5F68CE9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hunter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -503,10 +533,13 @@
 			baseConfigurationReference = 43BDC28050C42F2991547390 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hunter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

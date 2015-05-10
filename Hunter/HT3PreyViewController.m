@@ -33,8 +33,6 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-
-    
     
     _backgroundImage.image = [UIImage imageNamed:@"phone.jpg"];
     
@@ -50,11 +48,10 @@
     _preyDistanceOne.text = preyData.preyDistance1;
     _preyDistanceTwo.text = preyData.preyDistance2;
     _preyDistanceThree.text = preyData.preyDistance3;
-    
-    
-    NSLog(@"Global var is : %@",preyData.preyDistance1);
-    
 }
+
+//******************************************************************************************
+
 
     //send preyInfo to mapVC
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
