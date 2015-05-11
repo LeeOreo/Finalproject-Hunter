@@ -15,6 +15,10 @@
 @property (strong, nonatomic) NSString *preyDistance2;
 @property (strong, nonatomic) NSString *preyDistance3;
 
+@property (strong, nonatomic) NSString *preyLevel1;
+@property (strong, nonatomic) NSString *preyLevel2;
+@property (strong, nonatomic) NSString *preyLevel3;
+
 @property (strong, nonatomic) UIImage *preyPhoto1;
 @property (strong, nonatomic) UIImage *preyPhoto2;
 @property (strong, nonatomic) UIImage *preyPhoto3;

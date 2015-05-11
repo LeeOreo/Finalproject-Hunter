@@ -9,8 +9,8 @@
 #import "HTProfileViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
-#import <PFFacebookUtils.h>
+//#import <ParseFacebookUtils/PFFacebookUtils.h>
+//#import <PFFacebookUtils.h>
 
 @interface HTProfileViewController ()
 

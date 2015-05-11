@@ -30,34 +30,32 @@
     
     float width = (_teachImageView.frame.size.width);
     float height = (_teachImageView.frame.size.height);
-    
+    NSLog(@"with is : %f",width);
     self.teachScrollView.contentSize = CGSizeMake(width*3, height);
     
     NSArray *teachImageArray = [[NSArray alloc] initWithObjects:[UIImage imageNamed: @"TeachPage1.jpg"],[UIImage imageNamed:@"TeachPage2.jpg"],[UIImage imageNamed:@"TeachPage3.jpg"], nil];
-    NSLog(@"%@",teachImageArray[0]);
-    NSLog(@"%@",teachImageArray[1]);
-    NSLog(@"%@",teachImageArray[2]);
-
     
-//    UIImageView *teachImage1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TeachPage1"]];
-//    UIImageView *teachImage2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TeachPage2"]];
-//    UIImageView *teachImage3 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TeachPage3"]];
-//
-//
-//    [teachImageArray arrayByAddingObject:teachImage1];
-//    NSLog(@"%@",teachImageArray);
-//    [teachImageArray arrayByAddingObject:teachImage2];
-//    [teachImageArray arrayByAddingObject:teachImage3];
-
     for (int i = 0; i<3; i++) {
         NSLog(@"yoyoyo");
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(width*i, 0, width, height)];
         imageView.contentMode = UIViewContentModeScaleAspectFill;
         imageView.image = teachImageArray[i];
         imageView.clipsToBounds = YES;
         [self.teachScrollView addSubview:imageView];
     }
 }
+
+//- (void) viewDidAppear:(BOOL)animated {
+//    if ([PFUser currentUser]) {
+//        
+//        NSLog(@"testtesttesttesttest");
+//        
+//        UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
+//        [self presentViewController:slidemenuVC animated:YES completion:nil];
+//    }
+//
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

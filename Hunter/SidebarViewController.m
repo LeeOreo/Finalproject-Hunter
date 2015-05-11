@@ -8,7 +8,6 @@
 
 #import "SidebarViewController.h"
 #import "SWRevealViewController.h"
-#import "HTRankViewController.h"
 
 @interface SidebarViewController ()
 
@@ -32,8 +31,13 @@
     [super viewDidLoad];
     
     _menuItems = @[@"Profile",@"Hunter",@"Ranking",@"Logout"];
-
-
+    
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgrund2.jpg"]];
+    [tempImageView setFrame:self.tableView.frame];
+    
+    self.tableView.backgroundView = tempImageView;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,14 +70,6 @@
     // Return the number of rows in the section.
     return _menuItems.count;
 }
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-//    
-//    return cell;
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = [_menuItems objectAtIndex:indexPath.row];

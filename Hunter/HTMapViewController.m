@@ -9,12 +9,14 @@
 #import "HTMapViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
-#import "HTConst.h"
+//#import "HTConst.h"
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
+//#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "HTLocationData.h"
-#import "HT3PreyViewController.h"
+//#import "HT3PreyViewController.h"
+#import "UIView+AnimationExtensions.h"
+
 
 @interface HTMapViewController ()  <MKMapViewDelegate>
 
@@ -37,7 +39,7 @@
     
     //設定初始地圖大小
     [self.myMap setRegion:MKCoordinateRegionMake(appDel.userLocation.location.coordinate, MKCoordinateSpanMake(0.003f, 0.003f)) animated:YES];
-    [self.myMap setShowsUserLocation:NO];
+    [self.myMap setShowsUserLocation:YES];
     [self.myMap setDelegate:self];
 
     
@@ -45,7 +47,7 @@
     [_myMap addOverlay:self.circleOverlay];
     
     HTLocationData *preyData = [HTLocationData sharePreyDistance];
-    [preyData getPreyData];
+//    [preyData getPreyData];
     
     _preyDistance.text = preyData.preyDistance1;
 
@@ -53,7 +55,7 @@
 }
 
     //set attack distance
-- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay {
+- (MKOverlayRenderer *)mapView:(MKMapView *)hmapView rendererForOverlay:(id < MKOverlay >)overlay {
     if ([overlay isKindOfClass:[MKCircle class]]) {
         MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithCircle:self.circleOverlay];
         [circleRenderer setFillColor:[[UIColor redColor] colorWithAlphaComponent:0.2f]];
@@ -73,9 +75,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 
 - (IBAction)attack:(id)sender {
@@ -107,18 +106,5 @@
 
 //********************************************************************************************
 
-//- (IBAction)whenSufferAttack:(id)sender {
-//    
-//    UIAlertController *attackAlert = [UIAlertController alertControllerWithTitle:@"危險危險"
-//                                                                         message:@"快逃快逃"
-//                                                                  preferredStyle:UIAlertControllerStyleAlert];
-//    //declare LEFT
-//    UIAlertAction *leftAction = [UIAlertAction actionWithTitle:@"往左逃"
-//                                                         style:UIAlertActionStyleDefault
-//                                                       handler:^(UIAlertAction *action) {
-//        
-//    }]
-//    
-//}
 
 @end

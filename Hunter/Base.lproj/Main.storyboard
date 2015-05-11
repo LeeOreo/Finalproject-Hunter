@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HKb-rH-a3X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -262,14 +261,6 @@
                                     <segue destination="CSD-rf-yAl" kind="modal" identifier="preyInfo3" modalTransitionStyle="partialCurl" id="WDe-9K-F59"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDv-Yl-pao">
-                                <rect key="frame" x="84" y="518" width="152" height="30"/>
-                                <color key="backgroundColor" red="0.40784313729999999" green="0.95294117649999999" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="重新搜索附近目標">
-                                    <color key="titleColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -284,6 +275,9 @@
                         <outlet property="preyImage1" destination="ev7-E1-qR3" id="VQb-EU-khf"/>
                         <outlet property="preyImage2" destination="UX8-le-qKu" id="QD1-Pm-Nnc"/>
                         <outlet property="preyImage3" destination="6qh-Vy-0c7" id="fNn-NS-157"/>
+                        <outlet property="preyRankLevel1" destination="8IF-3Z-6U9" id="DCp-cP-rwg"/>
+                        <outlet property="preyRankLevel2" destination="6RE-LV-mEd" id="4q5-GK-YxL"/>
+                        <outlet property="preyRankLevel3" destination="kOa-j5-rLB" id="EO6-XB-mPX"/>
                         <outlet property="sidebarButton" destination="Yvz-lK-jja" id="BMR-Ll-TYS"/>
                     </connections>
                 </viewController>
@@ -396,7 +390,7 @@
                     <navigationItem key="navigationItem" id="3Uc-A6-YUg"/>
                     <connections>
                         <outlet property="myMap" destination="bTM-Ap-aJN" id="rhg-p6-dDQ"/>
-                        <outlet property="preyDistance" destination="s3X-OV-uwn" id="DxP-4f-e1q"/>
+                        <outlet property="preyDistance" destination="s3X-OV-uwn" id="oki-Qj-iyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw6-Gd-tsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -488,14 +482,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Cf4-dC-zJu">
-                                <rect key="frame" x="0.0" y="64" width="320" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="排行榜的上方" translatesAutoresizingMaskIntoConstraints="NO" id="Cf4-dC-zJu">
+                                <rect key="frame" x="0.0" y="64" width="320" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="3z0-mp-eIg"/>
+                                    <constraint firstAttribute="height" constant="45" id="3z0-mp-eIg"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JAq-n1-2tq">
-                                <rect key="frame" x="0.0" y="165" width="320" height="403"/>
+                                <rect key="frame" x="0.0" y="110" width="320" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HTRankViewCell" id="zLG-OC-o1f" customClass="HTRankViewCell">
@@ -634,7 +628,7 @@
         <image name="TeachPage3" width="540" height="720"/>
         <image name="background2" width="210" height="336"/>
         <image name="phone" width="209" height="336"/>
-        <image name="phone.jpg" width="209" height="336"/>
+        <image name="排行榜的上方" width="250" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -642,8 +636,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WDe-9K-F59"/>
-        <segue reference="fdE-hp-PT4"/>
         <segue reference="UWU-Vs-ac7"/>
+        <segue reference="pGl-Sw-0Ab"/>
+        <segue reference="WDe-9K-F59"/>
     </inferredMetricsTieBreakers>
 </document>

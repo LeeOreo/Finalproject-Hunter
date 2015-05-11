@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <CoreLocation/CoreLocation.h>
-#import "HTConst.h"
+//#import "HTConst.h"
 #import "HTLocationData.h"
 
 
@@ -33,26 +33,14 @@
     [PFFacebookUtils initializeFacebook];
     [self getUserLocation];
     
-    
-    //set timer for update location
-    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 1
-                                                        target: self
-                                                      selector: @selector(updateLocation:)
-                                                      userInfo: nil
-                                                       repeats: YES];
-    
-    
-    // 設定攻擊範圍
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:UserDefaultsFilterDistanceKey] == nil) {
-        // If we have no accuracy in defaults, set it to 1000 feet.
-        [userDefaults setDouble:UserDefaultFilterDistance forKey:UserDefaultsFilterDistanceKey];
-    }
-
-
+//    // 設定攻擊範圍
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//    if ([userDefaults objectForKey:UserDefaultsFilterDistanceKey] == nil) {
+//        // If we have no accuracy in defaults, set it to 1000 feet.
+//        [userDefaults setDouble:UserDefaultFilterDistance forKey:UserDefaultsFilterDistanceKey];
+//    }
     return YES;
 }
-
 
 
 - (BOOL)application:(UIApplication *)application
@@ -73,6 +61,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+//    PFGeoPoint *zeroGeoPoint = [PFGeoPoint geoPointWithLatitude:0 longitude:0 ];
     [PFUser.currentUser setObject:[NSNull null] forKey: @"userLocation"];
     [[PFUser currentUser] saveInBackground];
 }
@@ -90,8 +80,9 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 //    [PFUser logOutInBackground];
 //    [PFUser logOut];
-    [PFUser.currentUser setObject:[NSNull null] forKey: @"userLocation"];
-    [[PFUser currentUser] saveInBackground];
+//    PFGeoPoint *zeroGeoPoint = [PFGeoPoint geoPointWithLatitude:0 longitude:0 ];
+//    [PFUser.currentUser setObject:zeroGeoPoint forKey: @"userLocation"];
+//    [[PFUser currentUser] saveInBackground];
 }
 
 #pragma mark - userLocation
@@ -111,8 +102,15 @@
         //start getUserLocation
         [_userLocation startUpdatingLocation];
 
-//是否在這邊上傳座標到parse?
-//先在parse創出geopoint的欄位?
+        PFUser *user = [PFUser currentUser];
+        if (user) {
+            // User's location
+            PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
+            [user setObject: userGeoPoint forKey: @"userLocation"];
+            [user saveInBackground];
+            
+            NSLog(@"updated");
+        }
 
         NSLog(@"print %6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);
     }else
@@ -120,27 +118,19 @@
 
 }
 
-- (void) updateLocation : (NSTimer *) timer {
-
-    [_userLocation stopUpdatingLocation];
-    [_userLocation startUpdatingLocation];
-    
-
-}
-
     //upload coordinate to parse~~~~~~~~~~
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-
-    PFUser *user = [PFUser currentUser];
-    if (user) {
-        // User's location
-        PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
-        [user setObject: userGeoPoint forKey: @"userLocation"];
-        [user saveInBackground];
-        
-        NSLog(@"updated");
-    }
-}
+//- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+//
+//    PFUser *user = [PFUser currentUser];
+//    if (user) {
+//        // User's location
+//        PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
+//        [user setObject: userGeoPoint forKey: @"userLocation"];
+//        [user saveInBackground];
+//        
+//        NSLog(@"updated");
+//    }
+//}
 
 
 @end

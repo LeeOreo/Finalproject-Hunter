@@ -6,11 +6,6 @@
 //  Copyright (c) 2015年 ALPHACamp. All rights reserved.
 //
 
-
-
-
-
-
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, RAFDetailViewControllerMode)

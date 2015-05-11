@@ -7,14 +7,13 @@
 //
 
 #import "HT3PreyViewController.h"
-#import "AppDelegate.h"
+//#import "AppDelegate.h"
 #import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
-#import <CoreLocation/CoreLocation.h>
-#import "HTMapViewController.h"
+//#import <ParseFacebookUtils/PFFacebookUtils.h>
+//#import <CoreLocation/CoreLocation.h>
+//#import "HTMapViewController.h"
 #import "HTLocationData.h"
 #import "SWRevealViewController.h"
-
 
 @interface HT3PreyViewController ()
 
@@ -33,9 +32,8 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-    
-    _backgroundImage.image = [UIImage imageNamed:@"phone.jpg"];
-    
+    _backgroundImage.image = [UIImage imageNamed:@"backgrund2.jpg"];
+
 //******************************************************************************************
     
     HTLocationData *preyData = [HTLocationData sharePreyDistance];
@@ -48,28 +46,32 @@
     _preyDistanceOne.text = preyData.preyDistance1;
     _preyDistanceTwo.text = preyData.preyDistance2;
     _preyDistanceThree.text = preyData.preyDistance3;
+    
+    _preyRankLevel1.text = preyData.preyLevel1;
+    _preyRankLevel2.text = preyData.preyLevel2;
+    _preyRankLevel3.text = preyData.preyLevel3;
 }
 
 //******************************************************************************************
 
 
     //send preyInfo to mapVC
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"preyInfo1"]) {
-        UINavigationController *navController = [segue destinationViewController];
-        HTMapViewController *vc = navController.viewControllers[0];
-        vc.preyDistance.text = self.preyDistanceOne.text;
-    }else if ([[segue identifier] isEqualToString:@"preyInfo2"]){
-        UINavigationController *navController = [segue destinationViewController];
-        HTMapViewController *vc = navController.viewControllers[0];
-        vc.preyDistance.text = self.preyDistanceTwo.text;
-    }else if ([[segue identifier] isEqualToString:@"preyInfo3"]){
-        UINavigationController *navController = [segue destinationViewController];
-        HTMapViewController *vc = navController.viewControllers[0];
-        vc.preyDistance.text = self.preyDistanceThree.text;
-
-    }
-}
+//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([[segue identifier] isEqualToString:@"preyInfo1"]) {
+//        UINavigationController *navController = [segue destinationViewController];
+//        HTMapViewController *vc = navController.viewControllers[0];
+//        vc.preyDistance.text = self.preyDistanceOne.text;
+//    }else if ([[segue identifier] isEqualToString:@"preyInfo2"]){
+//        UINavigationController *navController = [segue destinationViewController];
+//        HTMapViewController *vc = navController.viewControllers[0];
+//        vc.preyDistance.text = self.preyDistanceTwo.text;
+//    }else if ([[segue identifier] isEqualToString:@"preyInfo3"]){
+//        UINavigationController *navController = [segue destinationViewController];
+//        HTMapViewController *vc = navController.viewControllers[0];
+//        vc.preyDistance.text = self.preyDistanceThree.text;
+//
+//    }
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

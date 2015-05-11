@@ -9,15 +9,14 @@
 #import "HTRankViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
-#import <PFFacebookUtils.h>
+//#import <ParseFacebookUtils/PFFacebookUtils.h>
+//#import <PFFacebookUtils.h>
 #import "HTRankViewCell.h"
 
 
 @interface HTRankViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray *rankingArray;
-
 
 @end
 
@@ -29,14 +28,11 @@
     PFQuery *query = [PFUser query];
     [query orderByDescending:@"RankPoint"];
     _rankingArray = (NSMutableArray *)[query findObjects];
-    
-    NSLog(@"%@",_rankingArray);
-    
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -44,8 +40,6 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-    
-    
 }
 
 
@@ -67,15 +61,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HTRankViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HTRankViewCell" forIndexPath:indexPath];
     
+    HTRankViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HTRankViewCell" forIndexPath:indexPath];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"排行榜框框.jpg"]];
     
     // Configure the cell...
     NSString *rankPhotoURL =[[_rankingArray objectAtIndex:indexPath.row] objectForKey:@"pictureURL"];
     NSURL *rankImageURL = [NSURL URLWithString:rankPhotoURL];
     NSData *rankImageData = [NSData dataWithContentsOfURL:rankImageURL];
     cell.rankPhoto.image = [UIImage imageWithData:rankImageData];
-    
     
     NSString *rankLevelName = [[_rankingArray objectAtIndex:indexPath.row] objectForKey:@"RankLevel"];
     rankLevelName = [NSString stringWithFormat:@"階級：%@",rankLevelName];

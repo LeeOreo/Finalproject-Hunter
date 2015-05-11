@@ -39,8 +39,6 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>I need location</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>I need location</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

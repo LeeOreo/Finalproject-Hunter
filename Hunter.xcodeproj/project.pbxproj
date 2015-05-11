@@ -27,8 +27,12 @@
 		93C9475F1AF0FC910021635C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9475C1AF0FB350021635C /* MapKit.framework */; };
 		93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7361AFCD651001274B7 /* SWRevealViewController.m */; };
 		93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7391AFCD82A001274B7 /* SidebarViewController.m */; };
+		93D1E19F1B00A46800739664 /* backgrund2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93D1E19E1B00A46800739664 /* backgrund2.jpg */; };
+		93D1E1A11B00A75800739664 /* 排行榜框框.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93D1E1A01B00A75800739664 /* 排行榜框框.jpg */; };
 		93D42EAA1AFF8CD100E06F5D /* AnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D42EA91AFF8CD100E06F5D /* AnimationTest.m */; };
 		93D42EB01AFF8EE100E06F5D /* UIView+AnimationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D42EAF1AFF8EE100E06F5D /* UIView+AnimationExtensions.m */; };
+		93D42EB41B0099C800E06F5D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D42EB31B0099C800E06F5D /* AudioToolbox.framework */; };
+		93D42EB71B009BFF00E06F5D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D42EB51B009B2500E06F5D /* AVFoundation.framework */; };
 		BB10617F65910436C5368948 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1DFEC44C2FF36CCD99AF82 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -82,11 +86,15 @@
 		93CFF7361AFCD651001274B7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		93CFF7381AFCD82A001274B7 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		93CFF7391AFCD82A001274B7 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		93D1E19E1B00A46800739664 /* backgrund2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgrund2.jpg; sourceTree = "<group>"; };
+		93D1E1A01B00A75800739664 /* 排行榜框框.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "排行榜框框.jpg"; sourceTree = "<group>"; };
 		93D42EA41AFF80F900E06F5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		93D42EA81AFF8CD100E06F5D /* AnimationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTest.h; sourceTree = "<group>"; };
 		93D42EA91AFF8CD100E06F5D /* AnimationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTest.m; sourceTree = "<group>"; };
 		93D42EAE1AFF8EE100E06F5D /* UIView+AnimationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnimationExtensions.h"; sourceTree = "<group>"; };
 		93D42EAF1AFF8EE100E06F5D /* UIView+AnimationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnimationExtensions.m"; sourceTree = "<group>"; };
+		93D42EB31B0099C800E06F5D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		93D42EB51B009B2500E06F5D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D42EB71B009BFF00E06F5D /* AVFoundation.framework in Frameworks */,
+				93D42EB41B0099C800E06F5D /* AudioToolbox.framework in Frameworks */,
 				93C9475F1AF0FC910021635C /* MapKit.framework in Frameworks */,
 				BB10617F65910436C5368948 /* libPods.a in Frameworks */,
 			);
@@ -141,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				9369F8011AFA2551008ADAC5 /* phone.jpg */,
+				93D1E19E1B00A46800739664 /* backgrund2.jpg */,
+				93D1E1A01B00A75800739664 /* 排行榜框框.jpg */,
 				93C9472A1AEFB7D40021635C /* Hunter */,
 				93C947441AEFB7D40021635C /* HunterTests */,
 				93C947291AEFB7D40021635C /* Products */,
@@ -249,6 +261,8 @@
 		D1EA8D714AFCA3F490B89AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93D42EB51B009B2500E06F5D /* AVFoundation.framework */,
+				93D42EB31B0099C800E06F5D /* AudioToolbox.framework */,
 				93D42EA41AFF80F900E06F5D /* QuartzCore.framework */,
 				93C9475C1AF0FB350021635C /* MapKit.framework */,
 				8C1DFEC44C2FF36CCD99AF82 /* libPods.a */,
@@ -348,6 +362,8 @@
 				93C947371AEFB7D40021635C /* Main.storyboard in Resources */,
 				93C9473C1AEFB7D40021635C /* LaunchScreen.xib in Resources */,
 				93C947391AEFB7D40021635C /* Images.xcassets in Resources */,
+				93D1E19F1B00A46800739664 /* backgrund2.jpg in Resources */,
+				93D1E1A11B00A75800739664 /* 排行榜框框.jpg in Resources */,
 				9369F8021AFA2551008ADAC5 /* phone.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,7 +559,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hunter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -558,7 +574,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hunter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
