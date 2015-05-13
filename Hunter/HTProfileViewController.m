@@ -19,11 +19,14 @@
 @implementation HTProfileViewController
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _backgroundImage.image = [UIImage imageNamed:@"backgrund2.jpg"];
-    
+    _backgroundImage.image = [UIImage imageNamed:@"personaInfo#1.png"];
+    _myPhoto.layer.cornerRadius = _myPhoto.frame.size.width/2;
+    _myPhoto.layer.masksToBounds = YES;
+
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {

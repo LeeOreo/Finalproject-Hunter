@@ -2,7 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "排行榜元件.png"
     },
     {
       "idiom" : "universal",
@@ -10,8 +11,7 @@
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "排行榜的上方.jpg"
+      "scale" : "3x"
     }
   ],
   "info" : {

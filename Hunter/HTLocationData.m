@@ -59,10 +59,11 @@
     // Limit what could be a lot of points.
     query.limit = 4;
 //    NSArray *array = [[NSArray alloc] init];
-
+    
     
 
     __block NSArray *array = [[NSArray alloc] init];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         array = objects;
         //*****************************設定獵物距離*************************************
@@ -118,15 +119,10 @@
         
         //******************************設定獵物是否Attack!**********************************
         
-        //check prey attack?
-
-        self.checkAttack1 = (BOOL) [array[1] objectForKey:@"Attack"];
-        self.checkAttack2 = (BOOL) [array[2] objectForKey:@"Attack"];
-        self.checkAttack3 = (BOOL) [array[3] objectForKey:@"Attack"];
+        _preyName1 = [array[1] objectForKey:@"name"];
+        _preyName2 = [array[2] objectForKey:@"name"];
+        _preyName3 = [array[3] objectForKey:@"name"];
         
-        PFRole *role = [[PFRole alloc] initWithName:@"Attack"];
-        
-        [role saveInBackground];
     }];
     
     return array;

@@ -31,7 +31,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _backgroundImage.image = [UIImage imageNamed:@"backgrund2.jpg"];
+    [NSTimer scheduledTimerWithTimeInterval:2
+                                     target:self
+                                   selector:@selector(checkStatus)
+                                   userInfo:nil
+                                    repeats:YES];
+
+    _backgroundImage.image = [UIImage imageNamed:@"攻擊頁面#1.png"];
 
     MKPointAnnotation *point;
     
@@ -85,6 +91,7 @@
 
 
 - (IBAction)attack:(id)sender {
+    
     if ([_backgroundImage isBeingAnimated])
     {
         [_backgroundImage stopAnimation];
@@ -94,28 +101,48 @@
         [self startAnimation];
     }
     
-    seconds = 15;
+    seconds = 10;
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                              target:self
                                            selector:@selector(countDown)
                                            userInfo:nil
                                             repeats:YES];
     
+    HTLocationData *preyData = [HTLocationData sharePreyDistance];
+    [preyData getPreyData];
     
-//    PFACL *roleACL = [PFACL ACL];
-//    [roleACL setPublicReadAccess:YES];
-//    PFRole *role = [PFRole roleWithName:@"Administrator" acl:roleACL];
-//    [role saveInBackground];
-//    
-//    
-//    
-//    HTLocationData *preyData = [HTLocationData sharePreyDistance];
-//    [preyData getPreyData];
-//    
-////    [user setObject: userGeoPoint forKey: @"userLocation"];
-//    preyData.checkAttack1 = YES;
-//    
-//    [[PFUser currentUser] saveInBackground];
+    if (([_mode isEqualToString: @"1"])) {
+        PFObject *event = [PFObject objectWithClassName:@"Event"];
+        event[@"Action"] = @"SufferAttack";
+        event[@"preyName"] = preyData.preyName1;
+        [event saveInBackground];
+    }else if (([self.mode isEqualToString: @"2"])){
+        PFObject *event = [PFObject objectWithClassName:@"Event"];
+        event[@"Action"] = @"SufferAttack";
+        event[@"preyName"] = preyData.preyName2;
+        [event saveInBackground];
+    }else if (([_mode isEqualToString: @"3"])){
+        PFObject *event = [PFObject objectWithClassName:@"Event"];
+        event[@"Action"] = @"SufferAttack";
+        event[@"preyName"] = preyData.preyName3;
+        [event saveInBackground];
+    }
+
+}
+
+- (void)checkStatus {
+    
+    PFUser *user = [PFUser currentUser];
+    
+    PFQuery *statusQuery = [PFQuery queryWithClassName:@"Event"];   //query event這個class
+    [statusQuery includeKey:@"tartgetPointer"];                      //做一個key準備接
+    [statusQuery whereKey:@"tartgetPointer" equalTo:user];           //綁定PFUser
+    [statusQuery whereKey:@"Action" equalTo:@"SufferAttack"];       //確認是否遭受Attack
+    [statusQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSLog(@"jjjjjjjjjjjjjjjjjjjjjjjjjj :%@",objects);
+        
+    }];
+
 }
 
 - (void)startAnimation {           //放大縮小
@@ -124,6 +151,8 @@
                            repeat:YES];
     
 }
+
+
 - (void)countDown {
     seconds --;
     [_timeLeft setTitle:[NSString stringWithFormat:@"%i",seconds] forState:(UIControlStateNormal)];
@@ -131,14 +160,10 @@
         [timer invalidate];
         UIViewController *AnimationTest = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimationTest"];
         [self presentViewController:AnimationTest animated:YES completion:nil];
+        
     }
 }
 
-- (void)sufferAttack {
-    if ([[PFUser currentUser] objectForKey:@"Attack"]) {
-        NSLog(@"Alert!Alert!");
-    }
-}
 
 
 //********************************************************************************************

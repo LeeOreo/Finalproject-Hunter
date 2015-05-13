@@ -21,14 +21,6 @@
 
 @implementation HT3PreyViewController
 
-//- (void)awakeFromNib {
-//    _preyImage1.layer.cornerRadius = _preyImage1.frame.size.width/2;
-//    _preyImage2.layer.cornerRadius = _preyImage2.frame.size.width/2;
-//    _preyImage3.layer.cornerRadius = _preyImage3.frame.size.width/2;
-//    [_preyButton1 setBackgroundImage:[UIImage imageNamed:@"鎖住.png"] forState:UIControlStateNormal];
-//    NSLog(@"_preyImage1.frame.size.width/2 : %f",_preyImage1.frame.size.width/2);
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"附近的獵物";
@@ -40,7 +32,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
-    _backgroundImage.image = [UIImage imageNamed:@"backgrund2.jpg"];
+    _backgroundImage.image = [UIImage imageNamed:@"修改選人#1.png"];
     
 //    _preyDistanceOne.contentMode = UIViewContentModeScaleAspectFit;
 //    _preyDistanceOne.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"距離.png"]];
@@ -50,23 +42,14 @@
     HTLocationData *preyData = [HTLocationData sharePreyDistance];
     [preyData getPreyData];
     
-    _preyImage1.layer.backgroundColor=[[UIColor clearColor] CGColor];
-    _preyImage1.layer.cornerRadius=50;
-    _preyImage1.layer.borderWidth=3.0;
+    _preyImage1.layer.cornerRadius = _preyImage1.frame.size.width/2;
     _preyImage1.layer.masksToBounds = YES;
-    _preyImage1.layer.borderColor=[[UIColor greenColor] CGColor];
     
-    _preyImage2.layer.backgroundColor=[[UIColor clearColor] CGColor];
-    _preyImage2.layer.cornerRadius=50;
-    _preyImage2.layer.borderWidth=3.0;
+    _preyImage2.layer.cornerRadius = _preyImage2.frame.size.width/2;;
     _preyImage2.layer.masksToBounds = YES;
-    _preyImage2.layer.borderColor=[[UIColor greenColor] CGColor];
 
-    _preyImage3.layer.backgroundColor=[[UIColor clearColor] CGColor];
-    _preyImage3.layer.cornerRadius=50;
-    _preyImage3.layer.borderWidth=3.0;
+    _preyImage3.layer.cornerRadius = _preyImage3.frame.size.width/2;;
     _preyImage3.layer.masksToBounds = YES;
-    _preyImage3.layer.borderColor=[[UIColor greenColor] CGColor];
 
     
     _preyImage1.image = preyData.preyPhoto1;

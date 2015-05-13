@@ -23,7 +23,7 @@ void AudioServicesPlayAlertSound(SystemSoundID inSystemSoundID);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    _boxView.image = [UIImage imageNamed:@"TeachPage3.jpg"];
+    _boxView.image = [UIImage imageNamed:@"成功.png"];
     
 }
 
@@ -50,15 +50,17 @@ void AudioServicesPlayAlertSound(SystemSoundID inSystemSoundID);
 //    AudioServicesCreateSystemSoundID((__bridge CFURLRef)audioUrl, &_threeAM);
 //    AudioServicesPlaySystemSound(self.threeAM);
 //    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-    
-    if ([_boxView isBeingAnimated])
-    {
-        [_boxView stopAnimation];
-    }
-    else
-    {
-        [self startAnimation];
-    }
+    UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
+    [self presentViewController:slidemenuVC animated:YES completion:nil];
+
+//    if ([_boxView isBeingAnimated])
+//    {
+//        [_boxView stopAnimation];
+//    }
+//    else
+//    {
+//        [self startAnimation];
+//    }
 }
 
 //- (void)startAnimation {             //旋轉

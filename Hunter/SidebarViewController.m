@@ -32,7 +32,7 @@
     
     _menuItems = @[@"Profile",@"Hunter",@"Ranking",@"Logout"];
     
-    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgrund2.jpg"]];
+    UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"背景.png"]];
     [tempImageView setFrame:self.tableView.frame];
     
     self.tableView.backgroundView = tempImageView;
