@@ -79,10 +79,6 @@
     return nil;
 }
 
-//- (void)viewDidAppear:(BOOL)animated {
-//    AppDelegate* appDel = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//    self.myMap.centerCoordinate = CLLocationCoordinate2DMake(appDel.userLocation.location.coordinate.latitude,appDel.userLocation.location.coordinate.longitude);
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -145,11 +141,14 @@
 
 }
 
-- (void)startAnimation {           //放大縮小
-    [_backgroundImage pulseToSize:1.2f
-                         duration:0.3f
-                           repeat:YES];
-    
+//- (void)startAnimation {           //放大縮小
+//    [_backgroundImage pulseToSize:1.2f
+//                         duration:0.3f
+//                           repeat:YES];
+//    
+//}
+- (void)startAnimation {             //水平震動
+    [_backgroundImage shakeHorizontally];
 }
 
 
