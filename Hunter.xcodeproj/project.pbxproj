@@ -10,9 +10,7 @@
 		930163201AFD82AD0045FA52 /* HTRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9301631F1AFD82AD0045FA52 /* HTRankViewController.m */; };
 		930163261AFEFC4B0045FA52 /* HTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930163251AFEFC4B0045FA52 /* HTProfileViewController.m */; };
 		9301632A1AFF11830045FA52 /* HTRankViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 930163291AFF11830045FA52 /* HTRankViewCell.m */; };
-		9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */; };
 		9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */; };
-		9369F8021AFA2551008ADAC5 /* phone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9369F8011AFA2551008ADAC5 /* phone.jpg */; };
 		9369F8061AFA38F3008ADAC5 /* HTLocationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F8051AFA38F3008ADAC5 /* HTLocationData.m */; };
 		93C9472E1AEFB7D40021635C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9472D1AEFB7D40021635C /* main.m */; };
 		93C947311AEFB7D40021635C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947301AEFB7D40021635C /* AppDelegate.m */; };
@@ -57,11 +55,8 @@
 		930163281AFF11830045FA52 /* HTRankViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRankViewCell.h; sourceTree = "<group>"; };
 		930163291AFF11830045FA52 /* HTRankViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRankViewCell.m; sourceTree = "<group>"; };
 		934085991AF3DE65004F4031 /* HTConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTConst.h; sourceTree = "<group>"; };
-		9369F7C21AF8D913008ADAC5 /* HTCountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCountDownViewController.h; sourceTree = "<group>"; };
-		9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCountDownViewController.m; sourceTree = "<group>"; };
 		9369F7FE1AFA0891008ADAC5 /* HT3PreyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT3PreyViewController.h; sourceTree = "<group>"; };
 		9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT3PreyViewController.m; sourceTree = "<group>"; };
-		9369F8011AFA2551008ADAC5 /* phone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = phone.jpg; sourceTree = "<group>"; };
 		9369F8041AFA38F3008ADAC5 /* HTLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLocationData.h; sourceTree = "<group>"; };
 		9369F8051AFA38F3008ADAC5 /* HTLocationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLocationData.m; sourceTree = "<group>"; };
 		93C947281AEFB7D40021635C /* Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +145,6 @@
 		93C9471F1AEFB7D40021635C = {
 			isa = PBXGroup;
 			children = (
-				9369F8011AFA2551008ADAC5 /* phone.jpg */,
 				93D1E19E1B00A46800739664 /* backgrund2.jpg */,
 				93D1E1A01B00A75800739664 /* 排行榜框框.jpg */,
 				93C9472A1AEFB7D40021635C /* Hunter */,
@@ -222,8 +216,6 @@
 			children = (
 				93C947531AEFBD060021635C /* HTLoginViewController.h */,
 				93C947541AEFBD060021635C /* HTLoginViewController.m */,
-				9369F7C21AF8D913008ADAC5 /* HTCountDownViewController.h */,
-				9369F7C31AF8D913008ADAC5 /* HTCountDownViewController.m */,
 				93C947591AEFCDD40021635C /* HTMapViewController.h */,
 				93C9475A1AEFCDD40021635C /* HTMapViewController.m */,
 				9369F7FE1AFA0891008ADAC5 /* HT3PreyViewController.h */,
@@ -364,7 +356,6 @@
 				93C947391AEFB7D40021635C /* Images.xcassets in Resources */,
 				93D1E19F1B00A46800739664 /* backgrund2.jpg in Resources */,
 				93D1E1A11B00A75800739664 /* 排行榜框框.jpg in Resources */,
-				9369F8021AFA2551008ADAC5 /* phone.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +417,6 @@
 				93D42EB01AFF8EE100E06F5D /* UIView+AnimationExtensions.m in Sources */,
 				93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */,
 				93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */,
-				9369F7C41AF8D913008ADAC5 /* HTCountDownViewController.m in Sources */,
 				93C9472E1AEFB7D40021635C /* main.m in Sources */,
 				93D42EAA1AFF8CD100E06F5D /* AnimationTest.m in Sources */,
 				93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */,

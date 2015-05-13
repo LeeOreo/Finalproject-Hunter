@@ -10,17 +10,18 @@
 
 @interface HT3PreyViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *preyDistanceOne;
+
+@property (strong, nonatomic) IBOutlet UIButton *preyDistanceOne;
 @property (weak, nonatomic) IBOutlet UIImageView *preyImage1;
-@property (weak, nonatomic) IBOutlet UILabel *preyRankLevel1;
+@property (strong, nonatomic) IBOutlet UIButton *preyButton1;
 
-@property (weak, nonatomic) IBOutlet UILabel *preyDistanceTwo;
+@property (strong, nonatomic) IBOutlet UIButton *preyDistanceTwo;
 @property (weak, nonatomic) IBOutlet UIImageView *preyImage2;
-@property (weak, nonatomic) IBOutlet UILabel *preyRankLevel2;
+@property (strong, nonatomic) IBOutlet UIButton *preyButton2;
 
-@property (weak, nonatomic) IBOutlet UILabel *preyDistanceThree;
+@property (strong, nonatomic) IBOutlet UIButton *preyDistanceThree;
 @property (weak, nonatomic) IBOutlet UIImageView *preyImage3;
-@property (weak, nonatomic) IBOutlet UILabel *preyRankLevel3;
+@property (strong, nonatomic) IBOutlet UIButton *preyButton3;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 

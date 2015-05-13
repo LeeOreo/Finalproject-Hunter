@@ -37,8 +37,18 @@
 //    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 //    if ([userDefaults objectForKey:UserDefaultsFilterDistanceKey] == nil) {
 //        // If we have no accuracy in defaults, set it to 1000 feet.
-//        [userDefaults setDouble:UserDefaultFilterDistance forKey:UserDefaultsFilterDistanceKey];
+//        [userDefaults setDouble:UserDefaultFilterDistance forKey:UserDefaultsFilterDistanceKey];]]
+    
+    
 //    }
+    
+    
+    [NSTimer scheduledTimerWithTimeInterval:10
+                                     target:self
+                                   selector:@selector(getUserLocation)
+                                   userInfo:nil
+                                    repeats:YES];
+    
     return YES;
 }
 
@@ -88,35 +98,43 @@
 #pragma mark - userLocation
 
 - (void)getUserLocation {
-    if (_userLocation ==nil) {
-        _userLocation = [[CLLocationManager alloc] init];
-        _userLocation.delegate = self;
+       
+    NSLog(@"repeat is right????");
         
-        _userLocation.desiredAccuracy = kCLLocationAccuracyBest;
-        // Set a movement threshold for new events.
-        _userLocation.distanceFilter = kCLLocationAccuracyNearestTenMeters;
-        // Set a movement threshold for new events.
-        _userLocation.distanceFilter = 500; // meters
-        //詢問是否要給APP定位權限
-        [_userLocation requestWhenInUseAuthorization];
-        //start getUserLocation
-        [_userLocation startUpdatingLocation];
+    _userLocation = [[CLLocationManager alloc] init];
+    _userLocation.delegate = self;
+        
+    _userLocation.desiredAccuracy = kCLLocationAccuracyBest;
+    // Set a movement threshold for new events.
+    _userLocation.distanceFilter = kCLLocationAccuracyNearestTenMeters;
+    // Set a movement threshold for new events.
+    _userLocation.distanceFilter = 500; // meters
+    //詢問是否要給APP定位權限
+    [_userLocation requestWhenInUseAuthorization];
+    //start getUserLocation
+    [_userLocation startUpdatingLocation];
+    
+//    PFQuery *query = [PFUser query];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        PFRole = objects;
+//    }];
+    
+    PFUser *user = [PFUser currentUser];
+    if (user) {
+        // User's location
+        
+        PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
+        [user setObject: userGeoPoint forKey: @"userLocation"];
+        [user saveInBackground];
 
-        PFUser *user = [PFUser currentUser];
-        if (user) {
-            // User's location
-            PFGeoPoint *userGeoPoint = [PFGeoPoint geoPointWithLatitude: _userLocation.location.coordinate.latitude longitude: _userLocation.location.coordinate.longitude];
-            [user setObject: userGeoPoint forKey: @"userLocation"];
-            [user saveInBackground];
-            
-            NSLog(@"updated");
+        NSLog(@"updated");
         }
 
-        NSLog(@"print %6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);
-    }else
-        NSLog(@"no");
+    NSLog(@"print %6f, %6f",_userLocation.location.coordinate.latitude,_userLocation.location.coordinate.longitude);
 
 }
+
+
 
     //upload coordinate to parse~~~~~~~~~~
 //- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

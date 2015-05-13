@@ -31,15 +31,25 @@ void AudioServicesPlayAlertSound(SystemSoundID inSystemSoundID);
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)viewDidAppear:(BOOL)animated {
+    if ([_boxView isBeingAnimated])
+    {
+        [_boxView stopAnimation];
+    }
+    else
+    {
+        [self startAnimation];
+    }
+}
 
 - (IBAction)buttonTapped:(id)sender
 {
     
-    NSURL *audioUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ringtone.wav" ofType:nil]];
-    
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)audioUrl, &_threeAM);
-    AudioServicesPlaySystemSound(self.threeAM);
-    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+//    NSURL *audioUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"ringtone.wav" ofType:nil]];
+//    
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)audioUrl, &_threeAM);
+//    AudioServicesPlaySystemSound(self.threeAM);
+//    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
     if ([_boxView isBeingAnimated])
     {
@@ -61,13 +71,13 @@ void AudioServicesPlayAlertSound(SystemSoundID inSystemSoundID);
 //
 //}
 
-//- (void)startAnimation {              //翻頁
-//    [_boxView flipWithDuration:0.3f
-//                     direction:UIViewAnimationFlipDirectionFromLeft
-//                   repeatCount:25
-//                   autoreverse:NO];
-//
-//}
+- (void)startAnimation {              //翻頁
+    [_boxView flipWithDuration:0.3f
+                     direction:UIViewAnimationFlipDirectionFromLeft
+                   repeatCount:2.5
+                   autoreverse:NO];
+
+}
 
 //- (void)startAnimation {           //放大縮小
 //    [_boxView pulseToSize:1.5f
@@ -80,9 +90,9 @@ void AudioServicesPlayAlertSound(SystemSoundID inSystemSoundID);
 //    [_boxView shakeHorizontally];
 //}
 
-- (void)startAnimation {             //垂直震動
-    [_boxView shakeVertically];
-}
+//- (void)startAnimation {             //垂直震動
+//    [_boxView shakeVertically];
+//}
 
 
 @end

@@ -9,10 +9,31 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+typedef NS_ENUM(NSUInteger, RAFDetailViewControllerMode)
+{
+    RAFDetailViewControllerMode_ShakeHorizontal,
+    RAFDetailViewControllerMode_ShakeVertical,
+    RAFDetailViewControllerMode_Pulse,
+    RAFDetailViewControllerMode_MotionEffects,
+    RAFDetailViewControllerMode_Rotate,
+    RAFDetailViewControllerMode_Flip,
+};
+
 @interface HTMapViewController : UIViewController <MKMapViewDelegate>
+{
+    NSTimer *timer;
+    int seconds;
+}
 
 @property (strong, nonatomic) IBOutlet MKMapView *myMap;
 
-@property (strong, nonatomic) IBOutlet UILabel *preyDistance;
+@property (strong, nonatomic) IBOutlet UIButton *preyDistance;
+
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+
+@property (strong, nonatomic) NSString *mode;
+
+@property (strong, nonatomic) IBOutlet UIButton *timeLeft;
+
 
 @end

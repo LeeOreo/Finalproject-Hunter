@@ -11,16 +11,23 @@
 #import <Parse/Parse.h>
 //#import <ParseFacebookUtils/PFFacebookUtils.h>
 //#import <CoreLocation/CoreLocation.h>
-//#import "HTMapViewController.h"
+#import "HTMapViewController.h"
 #import "HTLocationData.h"
 #import "SWRevealViewController.h"
 
 @interface HT3PreyViewController ()
 
-
 @end
 
 @implementation HT3PreyViewController
+
+//- (void)awakeFromNib {
+//    _preyImage1.layer.cornerRadius = _preyImage1.frame.size.width/2;
+//    _preyImage2.layer.cornerRadius = _preyImage2.frame.size.width/2;
+//    _preyImage3.layer.cornerRadius = _preyImage3.frame.size.width/2;
+//    [_preyButton1 setBackgroundImage:[UIImage imageNamed:@"鎖住.png"] forState:UIControlStateNormal];
+//    NSLog(@"_preyImage1.frame.size.width/2 : %f",_preyImage1.frame.size.width/2);
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,46 +39,64 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
     _backgroundImage.image = [UIImage imageNamed:@"backgrund2.jpg"];
-
-//******************************************************************************************
+    
+//    _preyDistanceOne.contentMode = UIViewContentModeScaleAspectFit;
+//    _preyDistanceOne.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"距離.png"]];
+    
+    //**************************************************************************************
     
     HTLocationData *preyData = [HTLocationData sharePreyDistance];
     [preyData getPreyData];
+    
+    _preyImage1.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    _preyImage1.layer.cornerRadius=50;
+    _preyImage1.layer.borderWidth=3.0;
+    _preyImage1.layer.masksToBounds = YES;
+    _preyImage1.layer.borderColor=[[UIColor greenColor] CGColor];
+    
+    _preyImage2.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    _preyImage2.layer.cornerRadius=50;
+    _preyImage2.layer.borderWidth=3.0;
+    _preyImage2.layer.masksToBounds = YES;
+    _preyImage2.layer.borderColor=[[UIColor greenColor] CGColor];
+
+    _preyImage3.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    _preyImage3.layer.cornerRadius=50;
+    _preyImage3.layer.borderWidth=3.0;
+    _preyImage3.layer.masksToBounds = YES;
+    _preyImage3.layer.borderColor=[[UIColor greenColor] CGColor];
+
     
     _preyImage1.image = preyData.preyPhoto1;
     _preyImage2.image = preyData.preyPhoto2;
     _preyImage3.image = preyData.preyPhoto3;
     
-    _preyDistanceOne.text = preyData.preyDistance1;
-    _preyDistanceTwo.text = preyData.preyDistance2;
-    _preyDistanceThree.text = preyData.preyDistance3;
-    
-    _preyRankLevel1.text = preyData.preyLevel1;
-    _preyRankLevel2.text = preyData.preyLevel2;
-    _preyRankLevel3.text = preyData.preyLevel3;
+    [_preyDistanceOne setTitle:preyData.preyDistance1 forState:(UIControlStateNormal)];
+    [_preyDistanceTwo setTitle:preyData.preyDistance2 forState:(UIControlStateNormal)];
+    [_preyDistanceThree setTitle:preyData.preyDistance3 forState:(UIControlStateNormal)];
 }
 
 //******************************************************************************************
 
 
     //send preyInfo to mapVC
-//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([[segue identifier] isEqualToString:@"preyInfo1"]) {
-//        UINavigationController *navController = [segue destinationViewController];
-//        HTMapViewController *vc = navController.viewControllers[0];
-//        vc.preyDistance.text = self.preyDistanceOne.text;
-//    }else if ([[segue identifier] isEqualToString:@"preyInfo2"]){
-//        UINavigationController *navController = [segue destinationViewController];
-//        HTMapViewController *vc = navController.viewControllers[0];
-//        vc.preyDistance.text = self.preyDistanceTwo.text;
-//    }else if ([[segue identifier] isEqualToString:@"preyInfo3"]){
-//        UINavigationController *navController = [segue destinationViewController];
-//        HTMapViewController *vc = navController.viewControllers[0];
-//        vc.preyDistance.text = self.preyDistanceThree.text;
-//
-//    }
-//}
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"preyInfo1"]) {
+        UINavigationController *navController = [segue destinationViewController];
+        HTMapViewController *vc = navController.viewControllers[0];
+        vc.mode = @"1";
+    }else if ([[segue identifier] isEqualToString:@"preyInfo2"]){
+        UINavigationController *navController = [segue destinationViewController];
+        HTMapViewController *vc = navController.viewControllers[0];
+        vc.mode = @"2";
+    }else if ([[segue identifier] isEqualToString:@"preyInfo3"]){
+        UINavigationController *navController = [segue destinationViewController];
+        HTMapViewController *vc = navController.viewControllers[0];
+        vc.mode = @"3";
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

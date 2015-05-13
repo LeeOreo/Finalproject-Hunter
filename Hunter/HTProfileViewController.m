@@ -9,8 +9,8 @@
 #import "HTProfileViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
-//#import <ParseFacebookUtils/PFFacebookUtils.h>
-//#import <PFFacebookUtils.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <PFFacebookUtils.h>
 
 @interface HTProfileViewController ()
 
@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    _backgroundImage.image = [UIImage imageNamed:@"backgrund2.jpg"];
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -35,7 +37,7 @@
     NSData *myPhotoData = [NSData dataWithContentsOfURL:myPhotoURL];
     _myPhoto.image = [UIImage imageWithData:myPhotoData];
     
-    _myLevel.text = [[PFUser currentUser] objectForKey:@"RankLevel"];
+    [_myLevel setTitle:[[PFUser currentUser] objectForKey:@"RankLevel"]forState:(UIControlStateNormal)];
     
 }
 

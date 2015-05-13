@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *myPhoto;
 
-@property (weak, nonatomic) IBOutlet UILabel *myLevel;
+@property (strong, nonatomic) IBOutlet UIButton *myLevel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end

@@ -23,6 +23,10 @@
 @property (strong, nonatomic) UIImage *preyPhoto2;
 @property (strong, nonatomic) UIImage *preyPhoto3;
 
+//@property (strong, nonatomic) PFUser *preyAttack1;
+//@property (strong, nonatomic) PFUser *preyAttack2;
+//@property (strong, nonatomic) PFUser *preyAttack3;
+
 @property (nonatomic) BOOL checkAttack1;
 @property (nonatomic) BOOL checkAttack2;
 @property (nonatomic) BOOL checkAttack3;

@@ -75,7 +75,6 @@
     rankLevelName = [NSString stringWithFormat:@"階級：%@",rankLevelName];
     cell.rankLevel.text = rankLevelName;
     
-    
     NSString *rankingPoint = [[_rankingArray objectAtIndex:indexPath.row] objectForKey:@"RankPoint"];
     rankingPoint = [NSString stringWithFormat:@"得分：%@",rankingPoint];
     cell.rankPoint.text = rankingPoint;
