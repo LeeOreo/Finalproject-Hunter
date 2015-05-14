@@ -31,6 +31,7 @@ void AudioServicesPlayAlertSound(SystemSoundID inSystemSoundID);
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)viewDidAppear:(BOOL)animated {
     if ([_boxView isBeingAnimated])
     {

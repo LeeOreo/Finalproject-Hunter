@@ -9,10 +9,8 @@
 #import "HTMapViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
-//#import "HTConst.h"
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
-//#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "HTLocationData.h"
 #import "HT3PreyViewController.h"
 #import "UIView+AnimationExtensions.h"
@@ -140,25 +138,17 @@
     [statusQuery whereKey:@"tartgetPointer" equalTo:user];           //綁定PFUser
     [statusQuery whereKey:@"Action" equalTo:@"SufferAttack"];       //確認是否遭受Attack
     [statusQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSLog(@"jjjjjjjjjjjjjjjjjjjjjjjjjj : %@",objects);
         if (objects.count > 0) {
-            UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
-            [self presentViewController:slidemenuVC animated:YES completion:nil];
+            //change viewcontroller when attack
+            
+            UIViewController *SufferAttack = [self.storyboard instantiateViewControllerWithIdentifier:@"SufferAttack"];
+            [self presentViewController:SufferAttack animated:YES completion:nil];
         }else
             NSLog(@"eeeeeeeeee");
     }];
     
-    //        UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
-    //        [self presentViewController:slidemenuVC animated:YES completion:nil];
-
 }
 
-//- (void)startAnimation {           //放大縮小
-//    [_backgroundImage pulseToSize:1.2f
-//                         duration:0.3f
-//                           repeat:YES];
-//    
-//}
 - (void)startAnimation {             //水平震動
     [_backgroundImage shakeHorizontally];
 }
@@ -175,9 +165,6 @@
     }
 }
 
-
-
-//********************************************************************************************
 
 
 @end

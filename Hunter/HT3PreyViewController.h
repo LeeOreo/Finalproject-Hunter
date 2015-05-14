@@ -10,7 +10,6 @@
 
 @interface HT3PreyViewController : UIViewController
 
-
 @property (strong, nonatomic) IBOutlet UIButton *preyDistanceOne;
 @property (weak, nonatomic) IBOutlet UIImageView *preyImage1;
 @property (strong, nonatomic) IBOutlet UIButton *preyButton1;

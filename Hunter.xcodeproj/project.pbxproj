@@ -13,6 +13,8 @@
 		93351C8C1B045943004E3E4C /* BGM短2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93351C8B1B045943004E3E4C /* BGM短2.wav */; };
 		9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */; };
 		9369F8061AFA38F3008ADAC5 /* HTLocationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F8051AFA38F3008ADAC5 /* HTLocationData.m */; };
+		93A9A1FA1B04B05700CE265C /* HTSufferAttackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A9A1F91B04B05700CE265C /* HTSufferAttackViewController.m */; };
+		93A9A2001B04D8D300CE265C /* HTResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A9A1FF1B04D8D300CE265C /* HTResultViewController.m */; };
 		93C9472E1AEFB7D40021635C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9472D1AEFB7D40021635C /* main.m */; };
 		93C947311AEFB7D40021635C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947301AEFB7D40021635C /* AppDelegate.m */; };
 		93C947341AEFB7D40021635C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C947331AEFB7D40021635C /* ViewController.m */; };
@@ -59,6 +61,10 @@
 		9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT3PreyViewController.m; sourceTree = "<group>"; };
 		9369F8041AFA38F3008ADAC5 /* HTLocationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTLocationData.h; sourceTree = "<group>"; };
 		9369F8051AFA38F3008ADAC5 /* HTLocationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTLocationData.m; sourceTree = "<group>"; };
+		93A9A1F81B04B05700CE265C /* HTSufferAttackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTSufferAttackViewController.h; sourceTree = "<group>"; };
+		93A9A1F91B04B05700CE265C /* HTSufferAttackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTSufferAttackViewController.m; sourceTree = "<group>"; };
+		93A9A1FE1B04D8D300CE265C /* HTResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTResultViewController.h; sourceTree = "<group>"; };
+		93A9A1FF1B04D8D300CE265C /* HTResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTResultViewController.m; sourceTree = "<group>"; };
 		93C947281AEFB7D40021635C /* Hunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C9472C1AEFB7D40021635C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C9472D1AEFB7D40021635C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -223,6 +229,10 @@
 				9301631F1AFD82AD0045FA52 /* HTRankViewController.m */,
 				930163241AFEFC4B0045FA52 /* HTProfileViewController.h */,
 				930163251AFEFC4B0045FA52 /* HTProfileViewController.m */,
+				93A9A1F81B04B05700CE265C /* HTSufferAttackViewController.h */,
+				93A9A1F91B04B05700CE265C /* HTSufferAttackViewController.m */,
+				93A9A1FE1B04D8D300CE265C /* HTResultViewController.h */,
+				93A9A1FF1B04D8D300CE265C /* HTResultViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -404,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A9A1FA1B04B05700CE265C /* HTSufferAttackViewController.m in Sources */,
 				9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */,
 				930163261AFEFC4B0045FA52 /* HTProfileViewController.m in Sources */,
 				930163201AFD82AD0045FA52 /* HTRankViewController.m in Sources */,
@@ -416,6 +427,7 @@
 				93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */,
 				93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */,
 				93C9472E1AEFB7D40021635C /* main.m in Sources */,
+				93A9A2001B04D8D300CE265C /* HTResultViewController.m in Sources */,
 				93D42EAA1AFF8CD100E06F5D /* AnimationTest.m in Sources */,
 				93C9475B1AEFCDD40021635C /* HTMapViewController.m in Sources */,
 			);

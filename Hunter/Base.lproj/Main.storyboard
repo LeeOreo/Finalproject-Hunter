@@ -443,7 +443,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgt-6e-BcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="2161"/>
+            <point key="canvasLocation" x="-28" y="2084"/>
+        </scene>
+        <!--Suffer Attack View Controller-->
+        <scene sceneID="hgX-Ha-aTT">
+            <objects>
+                <viewController storyboardIdentifier="SufferAttack" id="id2-2q-3um" customClass="HTSufferAttackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EzX-iC-Tek"/>
+                        <viewControllerLayoutGuide type="bottom" id="OF0-ci-rTN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a1M-go-bYP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yourunderatt" translatesAutoresizingMaskIntoConstraints="NO" id="M39-Wj-bmk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOm-tG-EDV">
+                                <rect key="frame" x="40" y="302" width="240" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <state key="normal" title="10">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-Qy-09q">
+                                <rect key="frame" x="40" y="477" width="240" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="123.4m">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="countDown" destination="MOm-tG-EDV" id="55x-l5-0XC"/>
+                        <outlet property="escapeDistance" destination="cxc-Qy-09q" id="AXJ-nE-3uG"/>
+                        <outlet property="sufferAttackImage" destination="M39-Wj-bmk" id="TPn-gD-R8Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RxB-77-MU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="1460"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="QB4-2d-zPF">
+            <objects>
+                <viewController storyboardIdentifier="Result" id="Vjm-gv-EZO" customClass="HTResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ykr-R2-Pm4"/>
+                        <viewControllerLayoutGuide type="bottom" id="nz9-bP-CuB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZT2-Ss-ph2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hunted" translatesAutoresizingMaskIntoConstraints="NO" id="lDM-0o-Jvb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfw-db-T28">
+                                <rect key="frame" x="50" y="288" width="228" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackProfile:" destination="Vjm-gv-EZO" eventType="touchUpInside" id="Jma-7i-dwy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultImage" destination="lDM-0o-Jvb" id="z1e-os-dyS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSJ-ol-VYI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="1460"/>
         </scene>
         <!--Rank View Controller-->
         <scene sceneID="BMg-iq-rKA">
@@ -602,7 +683,9 @@
     <resources>
         <image name="FBLogin" width="712" height="152"/>
         <image name="Slice 1" width="13" height="13"/>
+        <image name="hunted" width="750" height="1335"/>
         <image name="personaInfo#1" width="750" height="1335"/>
+        <image name="yourunderatt" width="750" height="1335"/>
         <image name="修改選人#1" width="750" height="1335"/>
         <image name="成功" width="750" height="1335"/>
         <image name="排行榜元件" width="750" height="77"/>
