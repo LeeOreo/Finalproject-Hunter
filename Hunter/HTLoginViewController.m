@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    
     
     float width = (_teachImageView.frame.size.width);
     float height = (_teachImageView.frame.size.height);

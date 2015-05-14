@@ -741,6 +741,17 @@ const int FrontViewPositionNone = 0xff;
 {
     [super viewDidAppear:animated];
 
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"BGM短2.wav"
+                                                     ofType:nil];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSError *error;
+    player = [[AVAudioPlayer alloc] initWithData:data error:&error];
+    
+    if(error == nil)
+    {
+        [player play];
+        
+    }
     // Uncomment the following code if you want the child controllers
     // to be loaded at this point.
     //

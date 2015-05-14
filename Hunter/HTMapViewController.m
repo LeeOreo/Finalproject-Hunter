@@ -111,16 +111,22 @@
         PFObject *event = [PFObject objectWithClassName:@"Event"];
         event[@"Action"] = @"SufferAttack";
         event[@"preyName"] = preyData.preyName1;
+        event[@"tartgetPointer"] = preyData.preyObjectID1;
+
         [event saveInBackground];
     }else if (([self.mode isEqualToString: @"2"])){
         PFObject *event = [PFObject objectWithClassName:@"Event"];
         event[@"Action"] = @"SufferAttack";
         event[@"preyName"] = preyData.preyName2;
+        event[@"tartgetPointer"] = preyData.preyObjectID2;
+
         [event saveInBackground];
     }else if (([_mode isEqualToString: @"3"])){
         PFObject *event = [PFObject objectWithClassName:@"Event"];
         event[@"Action"] = @"SufferAttack";
         event[@"preyName"] = preyData.preyName3;
+        event[@"tartgetPointer"] = preyData.preyObjectID3;
+        
         [event saveInBackground];
     }
 
@@ -129,15 +135,21 @@
 - (void)checkStatus {
     
     PFUser *user = [PFUser currentUser];
-    
     PFQuery *statusQuery = [PFQuery queryWithClassName:@"Event"];   //query event這個class
     [statusQuery includeKey:@"tartgetPointer"];                      //做一個key準備接
     [statusQuery whereKey:@"tartgetPointer" equalTo:user];           //綁定PFUser
     [statusQuery whereKey:@"Action" equalTo:@"SufferAttack"];       //確認是否遭受Attack
     [statusQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSLog(@"jjjjjjjjjjjjjjjjjjjjjjjjjj :%@",objects);
-        
+        NSLog(@"jjjjjjjjjjjjjjjjjjjjjjjjjj : %@",objects);
+        if (objects.count > 0) {
+            UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
+            [self presentViewController:slidemenuVC animated:YES completion:nil];
+        }else
+            NSLog(@"eeeeeeeeee");
     }];
+    
+    //        UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
+    //        [self presentViewController:slidemenuVC animated:YES completion:nil];
 
 }
 

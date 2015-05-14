@@ -59,6 +59,14 @@
 
 #pragma mark - Table view data source
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    UIView *footer=[[UIView alloc] initWithFrame:CGRectMake(0,0,320.0,0)];
+    footer.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"背景.png"]];
+    
+    return footer;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.

@@ -181,9 +181,12 @@ typedef NS_ENUM(NSInteger, SWRevealToggleAnimationType)
     SWRevealToggleAnimationTypeEaseOut,   // <- produces an ease out curve animation
 };
 
+#import <AVFoundation/AVFoundation.h>
 
 @interface SWRevealViewController : UIViewController
-
+{
+    AVAudioPlayer *player;
+}
 /* Basic API */
 
 // Object instance init and rear view setting

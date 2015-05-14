@@ -10,5 +10,4 @@
 
 @interface HTLoginViewController : UIViewController
 
-
 @end

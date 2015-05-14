@@ -42,6 +42,8 @@
     
     [_myLevel setTitle:[[PFUser currentUser] objectForKey:@"RankLevel"]forState:(UIControlStateNormal)];
     
+    [_myPoint setTitle:[[[PFUser currentUser] objectForKey:@"RankPoint"] stringValue]forState:(UIControlStateNormal)];
+    
 }
 
 - (void)didReceiveMemoryWarning {

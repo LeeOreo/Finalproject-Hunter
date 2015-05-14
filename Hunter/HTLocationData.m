@@ -123,6 +123,11 @@
         _preyName2 = [array[2] objectForKey:@"name"];
         _preyName3 = [array[3] objectForKey:@"name"];
         
+        NSLog(@"%@",array[1]);
+        _preyObjectID1 = array[1];
+        _preyObjectID2 = array[2];
+        _preyObjectID3 = array[3];
+        
     }];
     
     return array;

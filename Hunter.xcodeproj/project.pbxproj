@@ -10,6 +10,7 @@
 		930163201AFD82AD0045FA52 /* HTRankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9301631F1AFD82AD0045FA52 /* HTRankViewController.m */; };
 		930163261AFEFC4B0045FA52 /* HTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930163251AFEFC4B0045FA52 /* HTProfileViewController.m */; };
 		9301632A1AFF11830045FA52 /* HTRankViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 930163291AFF11830045FA52 /* HTRankViewCell.m */; };
+		93351C8C1B045943004E3E4C /* BGM短2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 93351C8B1B045943004E3E4C /* BGM短2.wav */; };
 		9369F8001AFA0891008ADAC5 /* HT3PreyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */; };
 		9369F8061AFA38F3008ADAC5 /* HTLocationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9369F8051AFA38F3008ADAC5 /* HTLocationData.m */; };
 		93C9472E1AEFB7D40021635C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9472D1AEFB7D40021635C /* main.m */; };
@@ -25,7 +26,6 @@
 		93C9475F1AF0FC910021635C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9475C1AF0FB350021635C /* MapKit.framework */; };
 		93CFF7371AFCD651001274B7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7361AFCD651001274B7 /* SWRevealViewController.m */; };
 		93CFF73A1AFCD82A001274B7 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CFF7391AFCD82A001274B7 /* SidebarViewController.m */; };
-		93D1E1A11B00A75800739664 /* 排行榜框框.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93D1E1A01B00A75800739664 /* 排行榜框框.jpg */; };
 		93D42EAA1AFF8CD100E06F5D /* AnimationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D42EA91AFF8CD100E06F5D /* AnimationTest.m */; };
 		93D42EB01AFF8EE100E06F5D /* UIView+AnimationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D42EAF1AFF8EE100E06F5D /* UIView+AnimationExtensions.m */; };
 		93D42EB41B0099C800E06F5D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D42EB31B0099C800E06F5D /* AudioToolbox.framework */; };
@@ -53,6 +53,7 @@
 		930163251AFEFC4B0045FA52 /* HTProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTProfileViewController.m; sourceTree = "<group>"; };
 		930163281AFF11830045FA52 /* HTRankViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTRankViewCell.h; sourceTree = "<group>"; };
 		930163291AFF11830045FA52 /* HTRankViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTRankViewCell.m; sourceTree = "<group>"; };
+		93351C8B1B045943004E3E4C /* BGM短2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "BGM短2.wav"; sourceTree = "<group>"; };
 		934085991AF3DE65004F4031 /* HTConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTConst.h; sourceTree = "<group>"; };
 		9369F7FE1AFA0891008ADAC5 /* HT3PreyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HT3PreyViewController.h; sourceTree = "<group>"; };
 		9369F7FF1AFA0891008ADAC5 /* HT3PreyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HT3PreyViewController.m; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				93D1E1A01B00A75800739664 /* 排行榜框框.jpg */,
+				93351C8B1B045943004E3E4C /* BGM短2.wav */,
 				93C9472A1AEFB7D40021635C /* Hunter */,
 				93C947441AEFB7D40021635C /* HunterTests */,
 				93C947291AEFB7D40021635C /* Products */,
@@ -349,9 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C947371AEFB7D40021635C /* Main.storyboard in Resources */,
+				93351C8C1B045943004E3E4C /* BGM短2.wav in Resources */,
 				93C9473C1AEFB7D40021635C /* LaunchScreen.xib in Resources */,
 				93C947391AEFB7D40021635C /* Images.xcassets in Resources */,
-				93D1E1A11B00A75800739664 /* 排行榜框框.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

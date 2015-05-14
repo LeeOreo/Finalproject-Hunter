@@ -27,6 +27,11 @@
 @property (strong, nonatomic) NSString *preyName2;
 @property (strong, nonatomic) NSString *preyName3;
 
+@property (strong, nonatomic) NSString *preyObjectID1;
+@property (strong, nonatomic) NSString *preyObjectID2;
+@property (strong, nonatomic) NSString *preyObjectID3;
+ 
+
 +(HTLocationData *)sharePreyDistance;
 
 - (NSArray *)getPreyData;

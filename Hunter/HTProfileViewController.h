@@ -16,6 +16,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *myLevel;
 
+@property (strong, nonatomic) IBOutlet UIButton *myPoint;
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end

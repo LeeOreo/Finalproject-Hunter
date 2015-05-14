@@ -97,7 +97,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cji-jz-Jt5">
                                             <rect key="frame" x="8" y="8" width="129" height="43"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                            <color key="textColor" red="0.0" green="0.55686274509803924" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.83921568627450982" green="0.99607843137254903" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -115,7 +115,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hunter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-ud-551">
                                             <rect key="frame" x="8" y="8" width="129" height="43"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                            <color key="textColor" red="0.0" green="0.55686274509803924" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.83921568627450982" green="0.99607843137254903" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -133,7 +133,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ranking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1s-8B-ntu">
                                             <rect key="frame" x="8" y="8" width="129" height="43"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                            <color key="textColor" red="0.0" green="0.55686274509803924" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.83921568627450982" green="0.99607843137254903" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -151,7 +151,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSf-O4-zBp">
                                             <rect key="frame" x="8" y="8" width="129" height="43"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                            <color key="textColor" red="0.0" green="0.55686274509803924" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.83921568627450982" green="0.99607843137254903" blue="0.75686274509803919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -312,7 +312,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWA-vT-Qc1">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWA-vT-Qc1">
                                 <rect key="frame" x="173" y="425" width="121" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="XXXXXXXX">
@@ -335,6 +335,7 @@
                         <outlet property="backgroundImage" destination="zVP-1G-zH3" id="hfe-yc-ewo"/>
                         <outlet property="myLevel" destination="Xig-m2-KU8" id="BdK-NQ-8X5"/>
                         <outlet property="myPhoto" destination="g4b-Yb-Hny" id="F5X-2R-ajs"/>
+                        <outlet property="myPoint" destination="cWA-vT-Qc1" id="Z0H-Qu-cUi"/>
                         <outlet property="sidebarButton" destination="gEc-WZ-YLU" id="XXr-jS-Gej"/>
                     </connections>
                 </viewController>
@@ -613,7 +614,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="UWU-Vs-ac7"/>
+        <segue reference="hZp-v8-8Qw"/>
         <segue reference="fdE-hp-PT4"/>
         <segue reference="b9o-w8-HJO"/>
     </inferredMetricsTieBreakers>
