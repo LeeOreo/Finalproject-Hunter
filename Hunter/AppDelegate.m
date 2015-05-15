@@ -12,7 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 //#import "HTConst.h"
 #import "HTLocationData.h"
-
+#import "GAI.h"
 
 @interface AppDelegate () <CLLocationManagerDelegate>
 
@@ -33,14 +33,17 @@
     [PFFacebookUtils initializeFacebook];
     [self getUserLocation];
     
-//    // 設定攻擊範圍
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    if ([userDefaults objectForKey:UserDefaultsFilterDistanceKey] == nil) {
-//        // If we have no accuracy in defaults, set it to 1000 feet.
-//        [userDefaults setDouble:UserDefaultFilterDistance forKey:UserDefaultsFilterDistanceKey];]]
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
     
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 20;
     
-//    }
+    // Optional: set Logger to VERBOSE for debug information.
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    
+    // Initialize tracker. Replace with your tracking ID.
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-63023421-1"];
     
     
     [NSTimer scheduledTimerWithTimeInterval:10

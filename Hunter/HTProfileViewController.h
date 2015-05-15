@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HTProfileViewController : UIViewController
+{
+    NSTimer *timer;
+    int seconds;
+}
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 

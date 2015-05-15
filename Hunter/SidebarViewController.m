@@ -10,7 +10,9 @@
 #import "SWRevealViewController.h"
 
 @interface SidebarViewController ()
-
+{
+    UIActivityIndicatorView *indicator;
+}
 @property (nonatomic, strong) NSArray *menuItems;
 
 @end
@@ -54,6 +56,11 @@
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
     destViewController.title = [[_menuItems objectAtIndex:indexPath.row] capitalizedString];
+
+//    indicator = [[UIActivityIndicatorView alloc]   initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+//    indicator.center = CGPointMake(160,200);
+//    [self.view addSubview:indicator];
+//    [indicator startAnimating];
     
 }
 
@@ -82,7 +89,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = [_menuItems objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+//    [indicator stopAnimating];
     return cell;
 }
 

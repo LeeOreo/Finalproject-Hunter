@@ -34,7 +34,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
    
-    seconds = 9;
+    seconds = 4;
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                              target:self
                                            selector:@selector(countDown)

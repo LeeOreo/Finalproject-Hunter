@@ -73,7 +73,6 @@
         CLLocation *preylocation1 = [[CLLocation alloc]initWithLatitude:tempLocation1.latitude longitude:tempLocation1.longitude];
         double distance1 = [appDel.userLocation.location distanceFromLocation:preylocation1];
         self.preyDistance1 = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%.01f m",distance1]];
-        NSLog(@"appDel.userLocation.location : %@",appDel.userLocation.location);
 //        NSLog(@"preyDistance1 is : %@",_preyDistance1);
 //        NSLog(@"Is this updating???");
 
@@ -123,7 +122,6 @@
         _preyName2 = [array[2] objectForKey:@"name"];
         _preyName3 = [array[3] objectForKey:@"name"];
         
-        NSLog(@"%@",array[1]);
         _preyObjectID1 = array[1];
         _preyObjectID2 = array[2];
         _preyObjectID3 = array[3];

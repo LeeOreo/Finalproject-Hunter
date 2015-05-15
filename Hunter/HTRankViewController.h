@@ -12,5 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
+@property (strong, nonatomic) IBOutlet UITableView *rankingTable;
 
 @end

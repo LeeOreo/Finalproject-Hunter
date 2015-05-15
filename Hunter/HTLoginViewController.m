@@ -48,16 +48,10 @@
     }
 }
 
-//- (void) viewDidAppear:(BOOL)animated {
-//    if ([PFUser currentUser]) {
-//        
-//        NSLog(@"testtesttesttesttest");
-//        
-//        UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
-//        [self presentViewController:slidemenuVC animated:YES completion:nil];
-//    }
-//
-//}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.screenName = @"About Screen";
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -72,12 +66,10 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
-    int page = scrollView.contentOffset.x / scrollView.frame.size.width;
+    int page = scrollView.contentOffset.x/scrollView.frame.size.width;
     
     self.pageControl.currentPage = page;
 }
-
-
 
 #pragma mark - FB data to Parse
 
@@ -110,7 +102,6 @@
             
             UIViewController *slidemenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"slidemenuVC"];
             [self presentViewController:slidemenuVC animated:YES completion:nil];
-
             [self saveUserDataToParse];
 
         }
@@ -133,7 +124,6 @@
             NSString *pictureURL =[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID];
             NSString *email = userData[@"email"];
             
-            NSLog(@"%@",pictureURL);
             [[PFUser currentUser] setObject:name forKey:@"name"];
             [[PFUser currentUser] setObject:facebookID forKey:@"facebookID"];
             [[PFUser currentUser] setObject:pictureURL forKey:@"pictureURL"];

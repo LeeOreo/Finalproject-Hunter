@@ -218,7 +218,7 @@
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Distance">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -229,7 +229,7 @@
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Distance">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -246,7 +246,7 @@
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Distance">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -260,7 +260,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xxl-5y-LVt">
-                        <barButtonItem key="leftBarButtonItem" image="Slice 1" style="plain" id="Yvz-lK-jja"/>
+                        <barButtonItem key="leftBarButtonItem" image="cogs3.png" style="plain" id="Yvz-lK-jja"/>
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImage" destination="cZK-W9-FRt" id="mOS-sF-UD1"/>
@@ -308,7 +308,7 @@
                                 <rect key="frame" x="37" y="413" width="123" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="XXXXXX">
-                                    <color key="titleColor" red="1" green="0.96724150610000004" blue="0.2159282746" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -316,7 +316,7 @@
                                 <rect key="frame" x="173" y="425" width="121" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="XXXXXXXX">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -328,7 +328,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="sv2-RB-b1I">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="gEc-WZ-YLU"/>
+                        <barButtonItem key="leftBarButtonItem" image="cogs3.png" id="gEc-WZ-YLU"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -368,14 +368,14 @@
                                 <rect key="frame" x="42" y="446" width="99" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Distance">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-at-7Oy">
                                 <rect key="frame" x="32" y="486" width="104" height="30"/>
-                                <state key="normal" title="XXXX">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="10">
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -463,8 +463,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOm-tG-EDV">
                                 <rect key="frame" x="40" y="302" width="240" height="102"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <state key="normal" title="10">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -472,7 +472,7 @@
                                 <rect key="frame" x="40" y="477" width="240" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="123.4m">
-                                    <color key="titleColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -560,13 +560,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-ng-o4N">
                                                     <rect key="frame" x="96" y="24" width="216" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="193-yD-5sK">
                                                     <rect key="frame" x="189" y="69" width="123" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.83921568629999999" green="0.99607843139999996" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -595,9 +595,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bWA-eo-Ifa">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="biB-ne-Mlg"/>
+                        <barButtonItem key="leftBarButtonItem" image="cogs3.png" id="biB-ne-Mlg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="rankingTable" destination="JAq-n1-2tq" id="dGb-k9-lig"/>
                         <outlet property="sidebarButton" destination="biB-ne-Mlg" id="LTQ-jA-IMs"/>
                     </connections>
                 </viewController>
@@ -682,7 +683,7 @@
     </scenes>
     <resources>
         <image name="FBLogin" width="712" height="152"/>
-        <image name="Slice 1" width="13" height="13"/>
+        <image name="cogs3.png" width="24" height="24"/>
         <image name="hunted" width="750" height="1335"/>
         <image name="personaInfo#1" width="750" height="1335"/>
         <image name="yourunderatt" width="750" height="1335"/>

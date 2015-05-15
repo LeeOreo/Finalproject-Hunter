@@ -34,6 +34,7 @@
                                    selector:@selector(checkStatus)
                                    userInfo:nil
                                     repeats:YES];
+    
 
     _backgroundImage.image = [UIImage imageNamed:@"攻擊頁面#1.png"];
 
@@ -95,7 +96,7 @@
         [self startAnimation];
     }
     
-    seconds = 10;
+    seconds = 5;
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                              target:self
                                            selector:@selector(countDown)
